@@ -1,0 +1,59 @@
+/* Common styles for all screen sizes */
+.header {
+    background-color: #fff;
+    color: #333;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding-left: 15px; /* Add margin to the left */
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem; /* Adjust font size */
+    font-weight: bold;
+  }
+  
+  .logo img {
+    height: 40px;
+    margin-right: 10px; /* Add space between logo and text */
+  }
+  
+  .header nav {
+    margin-top: 10px; /* Add space between logo and navigation */
+  }
+  
+  .header nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .header nav ul li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  .header nav ul li a:hover {
+    color: #007bff; /* Change color on hover */
+  }
+  
+  /* Media queries for different screen sizes */
+  @media (max-width: 768px) {
+    .logo {
+      font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+  
+    .logo img {
+      height: 30px; /* Adjust logo size for smaller screens */
+    }
+  
+    .header nav ul {
+      flex-direction: column; /* Stack navigation links vertically */
+      align-items: center; /* Center align navigation links */
+    }
+  }
+  
