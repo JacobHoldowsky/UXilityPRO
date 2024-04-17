@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import ContactPage from "./components/ContactPage";
+import ServicesPage from "./components/ServicesPage";
+import ServiceDetails from "./components/CustomWebDesignServiceDetails";
 
 function App() {
   return (
@@ -56,9 +58,11 @@ function App() {
             }
           />
 
-          {/* <Route path="/catalog" element={<Catalog />} />
-          <Route path="/about" element={<About />} /> */}
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/services/custom-website-design" element={<ServiceDetails />} />
+          {/* <Route path="/about" element={<About />} /> */}
           <Route path="/contact" element={<ContactPage />} />
+
         </Routes>
         {/* <Footer /> */}
       </div>

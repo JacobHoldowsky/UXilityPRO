@@ -1,0 +1,56 @@
+/* CustomWebDesignServiceDetails.css */
+
+.custom-web-design-service-details {
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 40px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-web-design-service-details h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.custom-web-design-service-details p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.custom-web-design-service-details p:last-child {
+  margin-bottom: 0;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .custom-web-design-service-details {
+    padding: 20px;
+  }
+
+  .custom-web-design-service-details h2 {
+    font-size: 1.8rem;
+  }
+
+  .custom-web-design-service-details p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .custom-web-design-service-details {
+    padding: 15px;
+  }
+
+  .custom-web-design-service-details h2 {
+    font-size: 1.5rem;
+  }
+
+  .custom-web-design-service-details p {
+    font-size: 0.9rem;
+  }
+}
