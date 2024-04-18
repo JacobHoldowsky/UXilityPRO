@@ -5,6 +5,11 @@
   padding: 0;
 }
 
+:root {
+  /* Define color variables */
+  --primary-color: #007bff;
+}
+
 /* Body styles */
 body {
   font-family: 'Roboto', sans-serif;
@@ -21,7 +26,7 @@ body {
 
 /* Hero section styles */
 .hero {
-  background-color: #007bff;
+  background-color: var(--primary-color);
   color: #fff;
   padding: 100px 20px; /* Adjust padding for smaller screens */
   text-align: center;
@@ -40,7 +45,7 @@ body {
 .btn-primary {
   display: inline-block;
   background-color: #fff;
-  color: #007bff;
+  color: var(--primary-color);
   font-size: 1.2rem;
   padding: 10px 20px;
   border: none;
@@ -58,7 +63,7 @@ body {
   display: flex;
   flex-wrap: wrap; /* Allow features to wrap to next row */
   justify-content: space-between;
-  margin-top: 40px; /* Reduce margin for smaller screens */
+  margin: 40px 40px 0px 40px;
 }
 
 .feature {

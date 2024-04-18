@@ -1,56 +1,44 @@
 /* CustomWebDesignServiceDetails.css */
 
+/* Styling for the modal content */
 .custom-web-design-service-details {
-  max-width: 800px;
-  margin: 100px auto;
-  padding: 40px;
-  background-color: #f8f9fa;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  background-color: #fff; /* Background color */
+  padding: 20px; /* Padding around the content */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+  max-width: 80%; /* Maximum width of the modal */
+  max-height: 80%; /* Maximum height of the modal */
+  overflow-y: auto; /* Enable scrolling if content exceeds height */
 }
 
+/* Styling for the modal title */
 .custom-web-design-service-details h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 20px;
+  font-size: 2rem; /* Adjust font size */
+  color: #333; /* Text color */
+  margin-bottom: 20px; /* Spacing below the title */
 }
 
+/* Styling for the modal paragraphs */
 .custom-web-design-service-details p {
-  font-size: 1.1rem;
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.custom-web-design-service-details p:last-child {
-  margin-bottom: 0;
+  font-size: 1rem; /* Adjust font size */
+  color: #666; /* Text color */
+  margin-bottom: 20px; /* Spacing below paragraphs */
 }
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
+  /* Adjustments for smaller screens */
   .custom-web-design-service-details {
-    padding: 20px;
+    padding: 15px; /* Reduce padding */
   }
 
   .custom-web-design-service-details h2 {
-    font-size: 1.8rem;
+    font-size: 1.8rem; /* Adjust font size */
   }
 
   .custom-web-design-service-details p {
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .custom-web-design-service-details {
-    padding: 15px;
-  }
-
-  .custom-web-design-service-details h2 {
-    font-size: 1.5rem;
-  }
-
-  .custom-web-design-service-details p {
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Adjust font size */
   }
 }

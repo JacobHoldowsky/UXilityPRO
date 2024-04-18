@@ -1,10 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import ContactPage from "./components/ContactPage";
 import ServicesPage from "./components/ServicesPage";
-import ServiceDetails from "./components/CustomWebDesignServiceDetails";
+import CustomWebDesignServiceDetails from "./components/CustomWebDesignServiceDetails";
 
 function App() {
   return (
@@ -19,14 +19,14 @@ function App() {
                 {/* Hero Section */}
                 <section className="hero">
                   <div className="hero-content">
-                    <h1>Welcome to UXilityPRO</h1>
+                    <h1>UXilityPRO</h1>
                     <p>
                       Your partner in creating stunning websites for small
                       businesses
                     </p>
-                    <a href="/services" className="btn-primary">
+                    <Link to="/services" className="btn-primary">
                       Explore Services
-                    </a>
+                    </Link>
                   </div>
                 </section>
 
@@ -59,10 +59,12 @@ function App() {
           />
 
           <Route path="/services" element={<ServicesPage />} />
-          <Route path="/services/custom-website-design" element={<ServiceDetails />} />
+          <Route
+            path="/services/custom-website-design"
+            element={<CustomWebDesignServiceDetails />}
+          />
           {/* <Route path="/about" element={<About />} /> */}
           <Route path="/contact" element={<ContactPage />} />
-
         </Routes>
         {/* <Footer /> */}
       </div>
