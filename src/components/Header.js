@@ -5,9 +5,9 @@ import "./Header.css";
 function Header() {
   return (
     <header className="header">
-      <div className="logo">
+      <Link to="/" className="logo">
         UXilityPRO
-      </div>
+      </Link>
       <nav>
         <ul>
           <li>
@@ -18,6 +18,9 @@ function Header() {
           </li>
           <li>
             <Link to="/portfolio">Portfolio</Link>
+          </li>
+          <li>
+            <Link to="/testamonials">Testamonials</Link>
           </li>
           <li>
             <Link to="/about">About</Link>

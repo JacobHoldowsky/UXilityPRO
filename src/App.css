@@ -26,15 +26,41 @@ body {
 
 /* Hero section styles */
 .hero {
-  background-color: var(--primary-color);
-  color: #fff;
-  padding: 100px 20px; /* Adjust padding for smaller screens */
+  color: black;
   text-align: center;
+  max-height: 500px
+}
+
+.hero {
+  display: flex;
+}
+
+
+.hero-image {
+  /* flex: 1; */
+  width: 50%; /* Adjust maximum width as needed */
+  max-height: 100%;
+}
+
+.hero-image img {
+  width: 100%; /* Ensure the image doesn't exceed its container's width */
+  height: 100%; /* Maintain aspect ratio */
+}
+
+.hero-content {
+  padding: 50px;
+  display: flex;  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
 }
 
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 20px;
+  color: var(--primary-color);
 }
 
 .hero p {
@@ -44,8 +70,8 @@ body {
 
 .btn-primary {
   display: inline-block;
-  background-color: #fff;
-  color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: white;
   font-size: 1.2rem;
   padding: 10px 20px;
   border: none;
@@ -62,17 +88,23 @@ body {
 .features {
   display: flex;
   flex-wrap: wrap; /* Allow features to wrap to next row */
-  justify-content: space-between;
-  margin: 40px 40px 0px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 0px 10px 0px 10px;
 }
 
 .feature {
-  flex: 0 0 calc(33.33% - 20px); /* Adjust flex basis for smaller screens */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 20px; /* Add margin between features */
   background-color: #fff;
-  padding: 40px;
-  border-radius: 10px;
+  padding: 20px;
+  border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .feature h2 {
@@ -82,6 +114,13 @@ body {
 
 .feature p {
   font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.feature img {
+  width: auto;
+  height: 300px;
+  border-radius: 15px;
 }
 
 /* Testimonials section styles */

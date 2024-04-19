@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import ContactPage from "./components/ContactPage";
 import ServicesPage from "./components/ServicesPage";
 import CustomWebDesignServiceDetails from "./components/CustomWebDesignServiceDetails";
+import AboutPage from "./components/AboutPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
               <React.Fragment>
                 {/* Hero Section */}
                 <section className="hero">
+                 
                   <div className="hero-content">
                     <h1>UXilityPRO</h1>
                     <p>
@@ -34,14 +36,23 @@ function App() {
                 <section className="features">
                   <div className="feature">
                     <h2>Beautiful Designs</h2>
+                    <div className="design-image">
+                      <img src="yo3.jpg" alt="Hero" />
+                    </div>
                     <p>Custom-designed websites tailored to your brand</p>
                   </div>
                   <div className="feature">
                     <h2>User-Friendly Experience</h2>
+                    <div className="design-image">
+                      <img src="yo.jpg" alt="Hero" />
+                    </div>
                     <p>Intuitive navigation and seamless user experience</p>
                   </div>
                   <div className="feature">
                     <h2>Results-Driven</h2>
+                    <div className="design-image">
+                      <img src="yo4.jpg" alt="Hero" />
+                    </div>
                     <p>
                       Drive success for your business with our effective
                       websites
@@ -63,7 +74,7 @@ function App() {
             path="/services/custom-website-design"
             element={<CustomWebDesignServiceDetails />}
           />
-          {/* <Route path="/about" element={<About />} /> */}
+          <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
         {/* <Footer /> */}
