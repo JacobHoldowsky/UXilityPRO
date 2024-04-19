@@ -90,7 +90,7 @@ body {
   flex-wrap: wrap; /* Allow features to wrap to next row */
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
   margin: 0px 10px 0px 10px;
 }
 

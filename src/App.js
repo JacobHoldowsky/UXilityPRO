@@ -35,18 +35,18 @@ function App() {
                 {/* Features Section */}
                 <section className="features">
                   <div className="feature">
-                    <h2>Beautiful Designs</h2>
-                    <div className="design-image">
-                      <img src="yo3.jpg" alt="Hero" />
-                    </div>
-                    <p>Custom-designed websites tailored to your brand</p>
-                  </div>
-                  <div className="feature">
                     <h2>User-Friendly Experience</h2>
                     <div className="design-image">
                       <img src="yo.jpg" alt="Hero" />
                     </div>
                     <p>Intuitive navigation and seamless user experience</p>
+                  </div>
+                  <div className="feature">
+                    <h2>Beautiful Designs</h2>
+                    <div className="design-image">
+                      <img src="yo3.jpg" alt="Hero" />
+                    </div>
+                    <p>Custom-designed websites tailored to your brand</p>
                   </div>
                   <div className="feature">
                     <h2>Results-Driven</h2>
