@@ -1,40 +1,54 @@
 /* Styling for the services page */
 .services-page {
-    padding: 20px 20px;
+    padding: 20px;
   }
   
   /* Styling for the service grid */
   .service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill); /* Adjust column width as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
+    margin: 20px 40px;
   }
   
   /* Styling for each service category */
   .service {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
+  }
+  
+  .service img {
+    width: 100%; /* Make the image fill its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px;
+    cursor: pointer;
   }
   
   /* Styling for service titles */
-  .service-category h3 {
+  .service h3 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   
   /* Styling for service descriptions */
-  .service-category p {
+  .service p {
     font-size: 1rem;
     color: #666;
-    margin-bottom: 10px;
+    margin: 20px 0px 10px 0px;
+    
   }
   
   /* Styling for the "Learn More" button */
-  .service-category .btn-primary {
-    align-self: flex-end; /* Align button to the end of the container */
+  .service .btn-primary {
     background-color: #007bff;
     color: #fff;
     font-size: 1rem;
@@ -45,9 +59,10 @@
     transition: background-color 0.3s ease;
   }
   
-  .service-category .btn-primary:hover {
+  .service .btn-primary:hover {
     background-color: #0056b3;
   }
+  
 
 /* Styling for the modal overlay */
 .modal-overlay {
@@ -65,13 +80,23 @@
   
   /* Styling for the modal container */
   .modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #fff; /* Background color of the modal */
-    padding: 20px; /* Padding around the modal content */
+    padding: 50px; /* Padding around the modal content */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
-    max-width: 80%; /* Maximum width of the modal */
+    max-width: 50%; /* Maximum width of the modal */
     max-height: 80%; /* Maximum height of the modal */
-    overflow-y: auto; /* Enable scrolling if content exceeds height */
+  }
+
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   /* Styling for the modal title */
@@ -80,12 +105,18 @@
     color: #333; /* Text color */
     margin-bottom: 20px; /* Spacing below the title */
   }
+
+  .modal img {
+    width: 300px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+  }
   
   /* Styling for the modal paragraphs */
   .modal p {
     font-size: 1rem; /* Font size */
     color: #666; /* Text color */
-    margin-bottom: 20px; /* Spacing below paragraphs */
+    margin-bottom: 0px; /* Spacing below paragraphs */
   }
   
   /* Styling for the close button */
@@ -110,7 +141,7 @@
 .modal-buttons {
   display: flex;
   justify-content: flex-end; /* Align buttons to the right */
-  margin-top: 20px; /* Add some space between buttons and content */
+  margin-top: 0px; /* Add some space between buttons and content */
 }
 
 .modal-buttons button {

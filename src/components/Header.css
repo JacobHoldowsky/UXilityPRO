@@ -1,5 +1,9 @@
 /* Common styles for all screen sizes */
 .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #fff;
     color: #333;
     padding: 20px 0;
@@ -7,18 +11,12 @@
     padding-left: 15px; /* Add margin to the left */
   }
   
-  .logo {
-    display: flex;
-    align-items: center;
-    font-size: 1.5rem; /* Adjust font size */
-    font-weight: bold;
-    color: var(--primary-color);
-    text-decoration: none;
-  }
+
   
   .logo img {
-    height: 40px;
+    height: 100px;
     margin-right: 10px; /* Add space between logo and text */
+    border-radius: 50%;
   }
   
   .header nav {

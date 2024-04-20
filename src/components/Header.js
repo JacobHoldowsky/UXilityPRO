@@ -6,7 +6,11 @@ function Header() {
   return (
     <header className="header">
       <Link to="/" className="logo">
-        UXilityPRO
+        <img
+          className="logo-img"
+          src="UXilityPROLogo.png"
+          alt="UXilityPRO Logo"
+        />
       </Link>
       <nav>
         <ul>

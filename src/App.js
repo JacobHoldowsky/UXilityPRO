@@ -21,7 +21,7 @@ function App() {
                 <section className="hero">
                  
                   <div className="hero-content">
-                    <h1>UXilityPRO</h1>
+                    
                     <p>
                       Your partner in creating stunning websites for small
                       businesses

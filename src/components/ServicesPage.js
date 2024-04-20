@@ -10,6 +10,7 @@ function ServicesPage() {
   const serviceDetails = {
     "Custom Website Design": {
       header: "Custom Website Design",
+      imageURL: "webDesign.jpg",
       smallDescription:
         "Create a unique online presence tailored to your brand",
       paragraphs: [
@@ -20,6 +21,7 @@ function ServicesPage() {
     },
     "Responsive Web Development": {
       header: "Responsive Web Development",
+      imageURL: "responsiveDesign.jpg",
       smallDescription:
         "Build websites optimized for all devices and screen sizes",
       paragraphs: [
@@ -30,6 +32,7 @@ function ServicesPage() {
     },
     "Website Hosting": {
       header: "Website Hosting",
+      imageURL: "websiteHosting.jpg",
       smallDescription:
         "Reliable hosting solutions to keep your website online 24/7",
       paragraphs: [
@@ -40,6 +43,7 @@ function ServicesPage() {
     },
     "Content Delivery Network (CDN)": {
       header: "Content Delivery Network (CDN)",
+      imageURL: "cdn.jpg",
       smallDescription:
         "Accelerate your website's performance with a global CDN",
       paragraphs: [
@@ -97,6 +101,7 @@ function ServicesPage() {
           <div className="service-category" key={serviceName}>
             <div className="service">
               <h3>{serviceName}</h3>
+              <img src={serviceDetails[serviceName].imageURL} alt="service" onClick={() => openModal(serviceDetails[serviceName])} />
               <p>{serviceDetails[serviceName]["smallDescription"]}</p>
               <button
                 onClick={() => openModal(serviceDetails[serviceName])}
@@ -111,8 +116,9 @@ function ServicesPage() {
       {modalOpen && (
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal" onClick={handleModalClick}>
-            <div>
+            <div className="modal-content">
               <h2>{selectedContent.header}</h2>
+              <img src={selectedContent.imageURL} alt="service" />
               {selectedContent.paragraphs.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}

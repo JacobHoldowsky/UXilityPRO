@@ -15,6 +15,7 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #f8f9fa;
   color: #333;
+
 }
 
 /* Container styles */
@@ -26,46 +27,39 @@ body {
 
 /* Hero section styles */
 .hero {
+  display: flex;
   color: black;
   text-align: center;
-  max-height: 500px
-}
-
-.hero {
-  display: flex;
-}
-
-
-.hero-image {
-  /* flex: 1; */
-  width: 50%; /* Adjust maximum width as needed */
-  max-height: 100%;
-}
-
-.hero-image img {
-  width: 100%; /* Ensure the image doesn't exceed its container's width */
-  height: 100%; /* Maintain aspect ratio */
+  max-height: 500px;
+  background-image: url("../public/UXilityPROLogo5.png");
+  background-size: 70%;
+  background-repeat: ;
+  background-position: center calc(50% - 40px);
+  background-position-x: center;
+  height: 220px;
 }
 
 .hero-content {
-  padding: 50px;
+  margin-top: 70px;
+  margin-left: ;
   display: flex;  
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   width: 100%;
+  color: var(--primary-color);
 }
 
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 20px;
-  color: var(--primary-color);
+  color: var(--primary-color)
 }
 
 .hero p {
   font-size: 1.2rem;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .btn-primary {
@@ -91,7 +85,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 25px;
-  margin: 0px 10px 0px 10px;
+  margin: 50px 10px 0px 10px;
 }
 
 .feature {
