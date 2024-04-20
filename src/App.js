@@ -19,13 +19,8 @@ function App() {
               <React.Fragment>
                 {/* Hero Section */}
                 <section className="hero">
-                 
                   <div className="hero-content">
-                    
-                    <p>
-                      Your partner in creating stunning websites for small
-                      businesses
-                    </p>
+                    <p>Empowering Your Online Presence</p>
                     <Link to="/services" className="btn-primary">
                       Explore Services
                     </Link>
