@@ -20,7 +20,6 @@ const ContactForm = () => {
     e.preventDefault();
     try {
       const response = await fetch("https://uxility-pro.vercel.app/send-email", {
-        // Update URL to point to your production server
         method: "POST",
         headers: {
           "Content-Type": "application/json",

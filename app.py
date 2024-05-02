@@ -33,7 +33,6 @@ def index():
 
 @app.route("/send-email", methods=["POST"])
 def send_email():
-    print('heytytyy')
     data = request.get_json()
     name = data["name"]
     email = data["email"]
@@ -47,7 +46,10 @@ def send_email():
 
     print(msg.body)
     try:
-        mail.send(msg)
+        # Explicitly connect to the SMTP server before sending the email
+        with app.app_context():
+            mail.connect()
+            mail.send(msg)
         return jsonify({"success": True, "message": "Email sent successfully"}), 200
     except Exception as e:
         # Log the error for debugging purposes
