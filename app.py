@@ -6,14 +6,7 @@ from dotenv import load_dotenv
 import os
 
 app = Flask(__name__)
-CORS(app)
-
-
-# Register routes after CORS middleware
-@app.route("/")
-def index():
-    return render_template("index.html")
-
+CORS(app, origins="*")
 
 # Load environment variables from .env file
 load_dotenv()
@@ -31,6 +24,11 @@ app.config["MAIL_USERNAME"] = os.getenv("MAIL_USERNAME")
 app.config["MAIL_PASSWORD"] = os.getenv("MAIL_PASSWORD")
 
 mail = Mail(app)
+
+
+@app.route("/")
+def index():
+    return render_template("index.html")
 
 
 @app.route("/send-email", methods=["POST"])
