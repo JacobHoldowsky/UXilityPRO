@@ -6,7 +6,8 @@ from dotenv import load_dotenv
 import os
 
 app = Flask(__name__)
-CORS(app, resources={r"/send-email": {"origins": "https://uxility-pro-vercel-app.com"}})
+CORS(app, origins="*")
+
 # Load environment variables from .env file
 load_dotenv()
 
