@@ -19,7 +19,8 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("/send-email", {  // Update URL to point to your production server
+      const response = await fetch("/send-email", {
+        // Update URL to point to your production server
         method: "POST",
         headers: {
           "Content-Type": "application/json",
