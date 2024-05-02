@@ -8,14 +8,13 @@
 :root {
   /* Define color variables */
   --primary-color: #007bff;
+  --secondary-color:#61acfb;
 }
 
 /* Body styles */
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f8f9fa;
   color: #333;
-
 }
 
 /* Container styles */
@@ -35,19 +34,18 @@ body {
   background-size: 70%;
   background-position: center calc(50% - 40px);
   background-position-x: center;
-  height: 220px;
+  height: 250px;
 }
 
 .hero-content {
   margin-top: 70px;
-  margin-left: ;
   display: flex;  
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   width: 100%;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .hero h1 {

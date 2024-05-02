@@ -1,26 +1,26 @@
 /* Common styles for all screen sizes */
 .header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    color: #333;
-    padding: 20px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding-left: 15px; /* Add margin to the left */
-  }
-  
+  position: sticky; /* Stick it to the top until the content scrolls */
+  top: 0; /* Stick it to the top of the viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #333;
+  padding: 10px 0px 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure it's above other content */
+}
 
   
   .logo img {
     height: 100px;
-    margin-right: 10px; /* Add space between logo and text */
     border-radius: 50%;
   }
   
   .header nav {
-    margin-top: 10px; /* Add space between logo and navigation */
+    margin-top: 5px; /* Add space between logo and navigation */
   }
   
   .header nav ul {

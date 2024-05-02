@@ -6,6 +6,8 @@ import ContactPage from "./components/ContactPage";
 import ServicesPage from "./components/ServicesPage";
 import CustomWebDesignServiceDetails from "./components/CustomWebDesignServiceDetails";
 import AboutPage from "./components/AboutPage";
+import PortfolioPage from "./components/Portfolio";
+import TestimonialSection from "./components/TestimonialSection";
 
 function App() {
   return (
@@ -21,8 +23,8 @@ function App() {
                 <section className="hero">
                   <div className="hero-content">
                     <p>Empowering Your Online Presence</p>
-                    <Link to="/services" className="btn-primary">
-                      Explore Services
+                    <Link to="/contact" className="btn-primary">
+                      Get Started Today
                     </Link>
                   </div>
                 </section>
@@ -58,7 +60,7 @@ function App() {
                 {/* Testimonials Section */}
                 <section className="testimonials">
                   <h2>What Our Clients Say</h2>
-                  {/* Include testimonials here */}
+                  <TestimonialSection />
                 </section>
               </React.Fragment>
             }
@@ -71,6 +73,7 @@ function App() {
           />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/portfolio" element={<PortfolioPage />} />
         </Routes>
         {/* <Footer /> */}
       </div>

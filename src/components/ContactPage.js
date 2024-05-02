@@ -1,32 +1,86 @@
-// ContactPage.js
-import React from 'react';
-import './ContactPage.css'; // Import CSS file for styling
+import React, { useState } from "react";
+import "./ContactPage.css"; // Import the CSS file for styling
 
-function ContactPage() {
+const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("/send-email", {  // Update URL to point to your production server
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        const data = await response.json();
+        alert(data.message);
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        throw new Error("Failed to send email");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error.message);
+      alert("Failed to send email");
+    }
+  };
+
   return (
-    <div className="contact-container">
-      <h1>Contact Us</h1>
-      <p>
-        Have questions or inquiries? Feel free to reach out to us using the
-        form below or contact us directly via email or phone.
-      </p>
-      <form className="contact-form">
-        <div className="form-group">
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" />
-        </div>
-        <div className="form-group">
-          <label htmlFor="message">Message:</label>
-          <textarea id="message" name="message" rows="4" />
-        </div>
-        <button type="submit">Send</button>
+    <div className="container">
+      <h2>Contact Us</h2>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+
+        <label htmlFor="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+
+        <label htmlFor="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          rows="4"
+          required
+        ></textarea>
+
+        <input type="submit" value="Submit" />
       </form>
     </div>
   );
-}
+};
 
-export default ContactPage;
+export default ContactForm;

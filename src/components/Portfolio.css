@@ -1,5 +1,5 @@
-/* Styling for the services page */
-.services-page {
+/* Styling for the projects page */
+.projects-page {
     padding: 20px;
     /* background-image: url("../../public/windows.jpg"); */
     background-size:cover;
@@ -10,12 +10,12 @@
     align-items: center;
   }
 
-  .services-page h1 {
+  .projects-page h1 {
     font-size: 36px;
   }
   
-  /* Styling for the service grid */
-  .service-grid {
+  /* Styling for the project grid */
+  .project-grid {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,9 +24,9 @@
     margin: 20px 0px;
   }
   
-  /* Styling for each service category */
-  .service {
-    width: 480px;
+  /* Styling for each project category */
+  .project {
+    width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,21 +37,21 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  .service img {
+  .project img {
     width: 100%; /* Make the image fill its container */
     height: auto; /* Maintain aspect ratio */
     border-radius: 15px;
     cursor: pointer;
   }
   
-  /* Styling for service titles */
-  .service h3 {
+  /* Styling for project titles */
+  .project h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
   }
   
-  /* Styling for service descriptions */
-  .service p {
+  /* Styling for project descriptions */
+  .project p {
     font-size: 1rem;
     color: #666;
     margin: 20px 0px 10px 0px;
@@ -59,7 +59,7 @@
   }
   
   /* Styling for the "Learn More" button */
-  .service .btn-primary {
+  .project .btn-primary {
     background-color: #007bff;
     color: #fff;
     font-size: 1rem;
@@ -70,7 +70,7 @@
     transition: background-color 0.3s ease;
   }
   
-  .service .btn-primary:hover {
+  .project .btn-primary:hover {
     background-color: #0056b3;
   }
   
@@ -166,15 +166,15 @@
   /* Responsive styles */
   @media screen and (max-width: 768px) {
     /* Adjustments for smaller screens */
-    .service {
+    .project {
       margin-bottom: 30px;
     }
     
-    .service h3 {
+    .project h3 {
       font-size: 1.3rem;
     }
   
-    .service p {
+    .project p {
       font-size: 0.9rem;
     }
   }

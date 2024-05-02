@@ -52,6 +52,38 @@ function ServicesPage() {
         "Experience the benefits of a CDN for your website today. Contact us to learn more about how our CDN service can optimize your web performance and enhance user satisfaction.",
       ],
     },
+    "SEO Service": {
+      header: "SEO Service",
+      imageURL: "seoService.jpg",
+      smallDescription:
+        "Optimize your website for better search engine visibility",
+      paragraphs: [
+        "Improve your website's search engine rankings and drive organic traffic with our SEO service.",
+        "We'll analyze your website, identify areas for improvement, and implement strategies to boost your online visibility.",
+        "From keyword research and on-page optimization to link building and content creation, we'll help you achieve higher rankings and attract more visitors to your site.",
+      ],
+    },
+    "Website Maintenance": {
+      header: "Website Maintenance",
+      imageURL: "websiteMaintenance.jpg",
+      smallDescription:
+        "Keep your website running smoothly with regular maintenance",
+      paragraphs: [
+        "Ensure your website remains secure, up-to-date, and error-free with our website maintenance service.",
+        "We'll handle routine tasks such as software updates, security patches, and backups to keep your site running smoothly.",
+        "With regular maintenance, you can prevent downtime, improve performance, and provide a better experience for your visitors.",
+      ],
+    },
+    "Logo Design": {
+      header: "Logo Design",
+      imageURL: "logoDesign.jpg",
+      smallDescription: "Create a memorable brand identity with a custom logo",
+      paragraphs: [
+        "Make a lasting impression with a professionally designed logo that reflects your brand's values and personality.",
+        "Our logo design service focuses on understanding your vision and translating it into a visually compelling logo.",
+        "Whether you're launching a new brand or rebranding an existing one, we'll collaborate closely with you to create a logo that captures the essence of your business and resonates with your audience.",
+      ],
+    },
     // Add content for other services here
   };
 
@@ -96,12 +128,17 @@ function ServicesPage() {
 
   return (
     <div className="services-page">
+      <h1>Our Services</h1>
       <div className="service-grid">
         {Object.keys(serviceDetails).map((serviceName) => (
           <div className="service-category" key={serviceName}>
             <div className="service">
               <h3>{serviceName}</h3>
-              <img src={serviceDetails[serviceName].imageURL} alt="service" onClick={() => openModal(serviceDetails[serviceName])} />
+              <img
+                src={serviceDetails[serviceName].imageURL}
+                alt="service"
+                onClick={() => openModal(serviceDetails[serviceName])}
+              />
               <p>{serviceDetails[serviceName]["smallDescription"]}</p>
               <button
                 onClick={() => openModal(serviceDetails[serviceName])}
@@ -120,7 +157,10 @@ function ServicesPage() {
               <h2>{selectedContent.header}</h2>
               <img src={selectedContent.imageURL} alt="service" />
               {selectedContent.paragraphs.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
+                <>
+                  <p key={index}>{paragraph}</p>
+                  <br />
+                </>
               ))}
             </div>
             <div className="modal-buttons">
