@@ -16,16 +16,23 @@ const ContactForm = () => {
     });
   };
 
+  const token = process.env.VERCEL_ACCESS_TOKEN;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("https://uxility-pro.vercel.app/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://uxility-pro.vercel.app/send-email",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+
+          body: JSON.stringify(formData),
+        }
+      );
       if (response.ok) {
         const data = await response.json();
         alert(data.message);

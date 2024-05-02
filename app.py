@@ -48,7 +48,6 @@ def send_email():
     try:
         # Explicitly connect to the SMTP server before sending the email
         with app.app_context():
-            mail.connect()
             mail.send(msg)
         return jsonify({"success": True, "message": "Email sent successfully"}), 200
     except Exception as e:
