@@ -23,7 +23,7 @@ const ContactForm = () => {
       const token = "TDAVKws7bGbZuIhWGZeMyeiH";
       console.log(token);
       const response = await fetch(
-        "uxility-pro.vercel.app/send-email",
+        "/send-email",
         {
           method: "POST",
           headers: {
