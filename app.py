@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
@@ -32,6 +32,7 @@ def index():
 
 
 @app.route("/send-email", methods=["POST"])
+@cross_origin()
 def send_email():
     data = request.get_json()
     name = data["name"]
