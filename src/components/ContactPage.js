@@ -20,7 +20,6 @@ const ContactForm = () => {
     e.preventDefault();
     try {
       const token = process.env.VERCEL_ACCESS_TOKEN; // Access the environment variable
-      console.log(token);
       const response = await fetch("/send-email", {
         method: "POST",
         headers: {
