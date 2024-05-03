@@ -16,18 +16,14 @@ function AboutPage() {
       <section className="section-team">
         <h2>Our Team</h2>
         <div className="team-member">
-          <img
-            className="team-member-image"
-            src="me.jpeg"
-            alt="Your Name"
-          />
+          <img className="team-member-image" src="me.jpeg" alt="Your Name" />
           <div className="team-member-info">
             <h3>Yaakov Holdowsky</h3>
             <p>Role: Founder & Owner</p>
             <p>
-              Bio: As the founder and owner of UXilityPRO, I bring years of
+              Bio: As the founder and owner of UXilityPRO, I bring great
               experience in web design and development, with a focus on creating
-              intuitive and visually stunning websites. My background in
+              intuitive and visually appealing websites. My background in
               software engineering enables me to deliver robust and scalable
               solutions tailored to our clients' needs. At UXilityPRO, my
               passion for delivering exceptional user experiences drives our
