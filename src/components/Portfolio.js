@@ -8,23 +8,11 @@ function PortfolioPage() {
   const portfolioDetails = {
     "Pretty Presents by Chana": {
       imageURL: "prettyPresentsLogo.png",
-      description: "Professional gift curation business",
+      description:
+        "Designed and developed the online presence for Pretty Presents by Chana, a professional gift curation business. The website showcases our expertise in creating visually appealing and user-friendly platforms to enhance brand visibility and customer engagement. From elegant design elements to seamless navigation, our portfolio includes this project as a testament to our skills in web development. Visit now to explore our work firsthand!",
     },
 
     // Add content for other projects here
-  };
-
-  const openModal = (content) => {
-    setSelectedContent(content);
-    setModalOpen(true);
-    // Disable scrolling in the background when the modal is open
-    document.body.style.overflow = "hidden";
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-    // Enable scrolling in the background when the modal is closed
-    document.body.style.overflow = "auto";
   };
 
   useEffect(() => {

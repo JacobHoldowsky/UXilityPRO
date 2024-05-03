@@ -1,7 +1,6 @@
 /* Styling for the services page */
 .services-page {
     padding: 20px;
-    /* background-image: url("../../public/windows.jpg"); */
     background-size:cover;
     background-position: left;
     display: flex;

@@ -16,7 +16,11 @@ function AboutPage() {
       <section className="section-team">
         <h2>Our Team</h2>
         <div className="team-member">
-          <img className="team-member-image" src="me.jpeg" alt="Your Name" />
+          <img
+            className="team-member-image"
+            src="me.jpeg"
+            alt="Your Name"
+          />
           <div className="team-member-info">
             <h3>Yaakov Holdowsky</h3>
             <p>Role: Founder & Owner</p>

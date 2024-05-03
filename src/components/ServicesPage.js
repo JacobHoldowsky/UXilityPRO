@@ -10,7 +10,7 @@ function ServicesPage() {
   const serviceDetails = {
     "Custom Website Design": {
       header: "Custom Website Design",
-      imageURL: "webDesign.jpg",
+      imageURL: "webDesign-min.jpg",
       smallDescription:
         "Create a unique online presence tailored to your brand",
       paragraphs: [
@@ -21,7 +21,7 @@ function ServicesPage() {
     },
     "Responsive Web Development": {
       header: "Responsive Web Development",
-      imageURL: "responsiveDesign.jpg",
+      imageURL: "responsiveDesign-min.jpg",
       smallDescription:
         "Build websites optimized for all devices and screen sizes",
       paragraphs: [
@@ -32,7 +32,7 @@ function ServicesPage() {
     },
     "Website Hosting": {
       header: "Website Hosting",
-      imageURL: "websiteHosting.jpg",
+      imageURL: "websiteHosting-min.jpg",
       smallDescription:
         "Reliable hosting solutions to keep your website online 24/7",
       paragraphs: [
@@ -43,7 +43,7 @@ function ServicesPage() {
     },
     "Content Delivery Network (CDN)": {
       header: "Content Delivery Network (CDN)",
-      imageURL: "cdn.jpg",
+      imageURL: "cdn-min.jpg",
       smallDescription:
         "Accelerate your website's performance with a global CDN",
       paragraphs: [
@@ -54,7 +54,7 @@ function ServicesPage() {
     },
     "SEO Service": {
       header: "SEO Service",
-      imageURL: "seoService.jpg",
+      imageURL: "seoService-min.jpg",
       smallDescription:
         "Optimize your website for better search engine visibility",
       paragraphs: [
@@ -65,7 +65,7 @@ function ServicesPage() {
     },
     "Website Maintenance": {
       header: "Website Maintenance",
-      imageURL: "websiteMaintenance.jpg",
+      imageURL: "websiteMaintenance-min.jpg",
       smallDescription:
         "Keep your website running smoothly with regular maintenance",
       paragraphs: [
@@ -76,7 +76,7 @@ function ServicesPage() {
     },
     "Logo Design": {
       header: "Logo Design",
-      imageURL: "logoDesign.jpg",
+      imageURL: "logoDesign-min.jpg",
       smallDescription: "Create a memorable brand identity with a custom logo",
       paragraphs: [
         "Make a lasting impression with a professionally designed logo that reflects your brand's values and personality.",

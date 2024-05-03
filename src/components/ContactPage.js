@@ -12,9 +12,19 @@ const ContactForm = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    let error = "";
+
+    // Email validation regex pattern
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (name === "email" && !emailPattern.test(value)) {
+      error = "Invalid email address";
+    }
+
     setFormData({
       ...formData,
       [name]: value,
+      error: error,
     });
   };
 
@@ -23,6 +33,11 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Disable the submit button to prevent double submission
+    const submitButton = e.target.querySelector('input[type="submit"]');
+    submitButton.disabled = true;
+
     try {
       const token = process.env.VERCEL_ACCESS_TOKEN; // Access the environment variable
       const response = await fetch(apiUrl + "/send-email", {
@@ -45,9 +60,11 @@ const ContactForm = () => {
         throw new Error("Failed to send email");
       }
     } catch (error) {
-      console.log("hi", error);
       console.error("Error sending email:", error.message);
       toast.error("Failed to send email"); // Error notification
+    } finally {
+      // Re-enable the submit button after submission is processed
+      submitButton.disabled = false;
     }
   };
 
