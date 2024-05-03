@@ -27,7 +27,13 @@ function TestimonialsSection() {
               ))}
             </div>
             <p>
-              <a href={testimonial.website}>Visit the Website</a>
+              <a
+                href={testimonial.website}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit the Website
+              </a>
             </p>
           </div>
         ))}

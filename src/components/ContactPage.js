@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; // Import the styles
 import "./ContactPage.css"; // Import the CSS file for styling
 
 const ContactForm = () => {
@@ -16,11 +18,14 @@ const ContactForm = () => {
     });
   };
 
+  const apiUrl =
+    process.env.NODE_ENV === "development" ? "http://localhost:5000" : "";
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const token = process.env.VERCEL_ACCESS_TOKEN; // Access the environment variable
-      const response = await fetch("/send-email", {
+      const response = await fetch(apiUrl + "/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -30,7 +35,7 @@ const ContactForm = () => {
       });
       if (response.ok) {
         const data = await response.json();
-        alert(data.message);
+        toast.success(data.message); // Success notification
         setFormData({
           name: "",
           email: "",
@@ -40,8 +45,9 @@ const ContactForm = () => {
         throw new Error("Failed to send email");
       }
     } catch (error) {
+      console.log("hi", error);
       console.error("Error sending email:", error.message);
-      alert("Failed to send email");
+      toast.error("Failed to send email"); // Error notification
     }
   };
 

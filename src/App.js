@@ -8,10 +8,13 @@ import CustomWebDesignServiceDetails from "./components/CustomWebDesignServiceDe
 import AboutPage from "./components/AboutPage";
 import PortfolioPage from "./components/Portfolio";
 import TestimonialSection from "./components/TestimonialSection";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; // Import the styles
 
 function App() {
   return (
     <Router>
+      <ToastContainer />
       <div className="App">
         <Header />
         <Routes>
