@@ -101,7 +101,7 @@ const ContactForm = () => {
 
         <label htmlFor="number">Number</label>
         <input
-          type="number"
+          type="tel"
           id="number"
           name="number"
           value={formData.number}
