@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./ServicesPage.css";
-import { button } from "react-router-dom";
+import { button, Link } from "react-router-dom";
 import CustomWebDesignServiceDetails from "./CustomWebDesignServiceDetails";
 
 function ServicesPage() {
@@ -170,11 +170,10 @@ function ServicesPage() {
               <button onClick={closeModal} className="btn-primary">
                 Close
               </button>
-              <button
-                onClick={() => (window.location.href = "/contact")}
-                className="btn-primary"
-              >
-                Contact Us
+              <button className="btn-primary">
+                <Link className="no-link-style" to="/contact">
+                  Contact Us
+                </Link>
               </button>
             </div>
           </div>
