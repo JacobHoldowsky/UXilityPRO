@@ -7,7 +7,7 @@ function AboutPage() {
       <section className="section-introduction">
         <h2>Welcome to UXilityPRO</h2>
         <p>
-          At UXilityPRO, we are passionate about creating stunning websites that
+          At UXilityPRO, we're passionate about creating stunning websites that
           help small businesses succeed online. Our mission is to provide
           innovative solutions and exceptional service to every client we serve.
         </p>
@@ -36,7 +36,7 @@ function AboutPage() {
       <section className="section-values">
         <h2>Our Values</h2>
         <p>
-          At UXilityPRO, we are driven by our passion for delivering exceptional
+          At UXilityPRO, we're driven by our passion for delivering exceptional
           user experiences. Our core values reflect this commitment:
         </p>
         <ul>
@@ -61,7 +61,7 @@ function AboutPage() {
             co-create user experiences that exceed expectations.
           </li>
           <li>
-            <strong>Continuous Improvement:</strong> We are committed to
+            <strong>Continuous Improvement:</strong> We're committed to
             continuous learning and improvement, staying up-to-date with the
             latest trends and best practices in user experience design.
           </li>
