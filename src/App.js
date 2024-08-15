@@ -68,10 +68,9 @@ function App() {
                   </div>
                 </section>
 
-                <section>
+                {/* <section>
                   <LinkedInSection />
-                  {/* Add this line to include the LinkedInSection */}
-                </section>
+                </section> */}
 
                 {/* Testimonials Section */}
                 <section className="testimonials">
