@@ -72,7 +72,7 @@ const ContactForm = () => {
 
   return (
     <div className="container">
-      <h2>Let's Connect</h2>
+      <h2>Ready to elevate your online presence?</h2>
       <p className="contact-description">
         We're excited to learn more about your needs. Please fill out the form
         below, and we'll be in touch shortly to discuss how we can work

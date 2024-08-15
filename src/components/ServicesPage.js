@@ -172,7 +172,7 @@ function ServicesPage() {
               </button>
               <button className="btn-primary">
                 <Link className="no-link-style" to="/contact">
-                  Let's Connect
+                  Get in Touch
                 </Link>
               </button>
             </div>
