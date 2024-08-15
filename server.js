@@ -30,13 +30,13 @@ app.get("/", (req, res) => {
 });
 
 app.post("/send-email", async (req, res) => {
-  const { name, email, message } = req.body;
+  const { name, email, number, message } = req.body;
 
   const mailOptions = {
     from: process.env.MAIL_USERNAME,
     to: process.env.PERSONAL_EMAIL,
     subject: "New Contact Form Submission",
-    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+    text: `Name: ${name}\nEmail: ${email}\nNumber: ${number}\nMessage: ${message}`,
   };
 
   try {

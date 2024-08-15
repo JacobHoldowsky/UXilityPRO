@@ -7,6 +7,7 @@ const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    number: "",
     message: "",
   });
 
@@ -54,6 +55,7 @@ const ContactForm = () => {
         setFormData({
           name: "",
           email: "",
+          number: "",
           message: "",
         });
       } else {
@@ -88,6 +90,16 @@ const ContactForm = () => {
           id="email"
           name="email"
           value={formData.email}
+          onChange={handleChange}
+          required
+        />
+     
+        <label htmlFor="number">Number</label>
+        <input
+          type="number"
+          id="number"
+          name="number"
+          value={formData.number}
           onChange={handleChange}
           required
         />
