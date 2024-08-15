@@ -72,7 +72,12 @@ const ContactForm = () => {
 
   return (
     <div className="container">
-      <h2>Contact Us</h2>
+      <h2>Let's Connect</h2>
+      <p className="contact-description">
+        We're excited to learn more about your needs. Please fill out the form
+        below, and we'll be in touch shortly to discuss how we can work
+        together.
+      </p>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name</label>
         <input
@@ -93,7 +98,7 @@ const ContactForm = () => {
           onChange={handleChange}
           required
         />
-     
+
         <label htmlFor="number">Number</label>
         <input
           type="number"

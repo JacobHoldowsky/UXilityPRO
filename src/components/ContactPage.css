@@ -9,7 +9,14 @@
 
 h2 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+.contact-description{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 label {
