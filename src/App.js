@@ -10,6 +10,7 @@ import PortfolioPage from "./components/Portfolio";
 import TestimonialSection from "./components/TestimonialSection";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; // Import the styles
+import LinkedInSection from "./components/LinkedInSection";
 
 function App() {
   return (
@@ -33,31 +34,43 @@ function App() {
                 </section>
 
                 {/* Features Section */}
-                <section className="features">
-                  <div className="feature">
-                    <h2>User-Friendly Experience</h2>
-                    <div className="design-image">
-                      <img src="yo.jpg" alt="Hero" />
+                <section>
+                  <div className="features">
+                    <div className="feature">
+                      <h2>Beautiful Designs</h2>
+                      <div className="design-image">
+                        <img src="yo.jpg" alt="Hero" />
+                      </div>
+                      <p>Custom-designed websites tailored to your brand</p>
                     </div>
-                    <p>Intuitive navigation and seamless user experience</p>
-                  </div>
-                  <div className="feature">
-                    <h2>Beautiful Designs</h2>
-                    <div className="design-image">
-                      <img src="yo3.jpg" alt="Hero" />
+                    <div className="feature">
+                      <h2>Results-Driven</h2>
+                      <div className="design-image">
+                        <img src="yo4.jpg" alt="Hero" />
+                      </div>
+                      <p>
+                        Drive success for your business with our effective
+                        websites
+                      </p>
                     </div>
-                    <p>Custom-designed websites tailored to your brand</p>
-                  </div>
-                  <div className="feature">
-                    <h2>Results-Driven</h2>
-                    <div className="design-image">
-                      <img src="yo4.jpg" alt="Hero" />
+                    <div className="feature">
+                      <h2>User-Friendly Experience</h2>
+                      <div className="design-image">
+                        <img src="userFriendly.jpg" alt="Hero" />
+                      </div>
+                      <p>Intuitive navigation and seamless user experience</p>
                     </div>
-                    <p>
-                      Drive success for your business with our effective
-                      websites
-                    </p>
                   </div>
+                  <div className="services-btn">
+                    <Link to="/services" className="btn-secondary">
+                      Explore Our Services
+                    </Link>
+                  </div>
+                </section>
+
+                <section>
+                  <LinkedInSection />
+                  {/* Add this line to include the LinkedInSection */}
                 </section>
 
                 {/* Testimonials Section */}

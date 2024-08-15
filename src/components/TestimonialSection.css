@@ -14,10 +14,13 @@
       gap: 15px;
       flex-wrap: wrap;
     }
+    .website-logo {
+      width: 180px;
+    }
     
     .testimonial {
       max-width: 39%;
-      background-color: #f9f9f9;
+      background-color: white;
       border-radius: 10px;
       padding: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -46,10 +49,10 @@
       color: gold;
     }}
     @media screen and (min-width: 577px) and (max-width: 767px) {
-    .testimonials-section {
-      padding: 20px 0;
-      text-align: center;
-    }
+      .testimonials-section {
+        padding: 20px 0;
+        text-align: center;
+      }
   
     .testimonials-section h2 {
       font-size: 20px;
@@ -92,6 +95,24 @@
     .rating .filled {
       color: gold;
     }}
+
+    
+    .site-link {
+      margin-top: 10px;
+      display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue color, you can change it to match your theme */
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove default underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+    .site-link:hover {
+      background-color: #0056b3; /* Darker shade of blue on hover */
+
+    }
+
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       .testimonials-section {
         padding: 20px 0;

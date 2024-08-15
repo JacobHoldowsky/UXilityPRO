@@ -101,11 +101,14 @@ function ServicesPage() {
   };
 
   useEffect(() => {
+    // Scroll to the top of the page
+    window.scrollTo(0, 0);
+
     // Cleanup function to enable scrolling in the background when the component unmounts
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, []);
+  }, []); // Empty dependency array ensures the effect runs only once when the component mounts
 
   useEffect(() => {
     // Add or remove 'modal-open' class from body based on modalOpen state
