@@ -86,6 +86,7 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    z-index: 10000;
   }
   
   /* Styling for the modal container */
@@ -99,7 +100,7 @@
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
     max-width: 50%; /* Maximum width of the modal */
-    max-height: 80%; /* Maximum height of the modal */
+    max-height: 90%; /* Maximum height of the modal */
   }
 
   .modal-content {
