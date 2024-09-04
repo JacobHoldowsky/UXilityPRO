@@ -21,7 +21,7 @@ const ContactForm = () => {
 
   // Environment-based API URL
   const apiUrl =
-    process.env.NODE_ENV === "development" ? "http://localhost:5000" : "";
+    process.env.NODE_ENV === "development" ? "http://localhost:5000" : "/api/";
 
   // Handle form submission
   const handleSubmit = async (e) => {
