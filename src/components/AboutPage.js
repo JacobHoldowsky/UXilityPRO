@@ -24,7 +24,7 @@ function AboutPage() {
           />
           <div className="about-team-member-info">
             <h3>Yaakov Holdowsky</h3>
-            <p>Founder & Owner</p>
+            <p>Founder</p>
             <p>
               As the driving force behind UXilityPRO, I bring a wealth of
               experience in web design and development, specializing in
