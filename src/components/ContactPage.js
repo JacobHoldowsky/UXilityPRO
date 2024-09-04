@@ -20,8 +20,12 @@ const ContactForm = () => {
   };
 
   // Environment-based API URL
+  // ContactPage.js
+
   const apiUrl =
-    process.env.NODE_ENV === "development" ? "http://localhost:5000" : "/api/";
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:5000/send-email" // When running locally
+      : "/api/send-email"; // When deployed to Vercel
 
   // Handle form submission
   const handleSubmit = async (e) => {
@@ -29,7 +33,7 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(apiUrl + "/send-email", {
+      const response = await fetch(apiUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
