@@ -29,12 +29,10 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      const token = process.env.VERCEL_ACCESS_TOKEN;
       const response = await fetch(apiUrl + "/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify(formData),
       });
@@ -63,7 +61,9 @@ const ContactForm = () => {
     <div className="contact-container">
       <h2 className="contact-heading">Let's Elevate Your Online Presence</h2>
       <p className="contact-description">
-        We're excited to learn more about your project! Fill out the form below, and we'll get back to you promptly to discuss how we can collaborate and achieve your goals.
+        We're excited to learn more about your project! Fill out the form below,
+        and we'll get back to you promptly to discuss how we can collaborate and
+        achieve your goals.
       </p>
       <form onSubmit={handleSubmit} className="contact-form">
         <div className="form-group">
