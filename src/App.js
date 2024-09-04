@@ -13,10 +13,12 @@ import CustomWebDesignServiceDetails from "./components/CustomWebDesignServiceDe
 import AboutPage from "./components/AboutPage";
 import Portfolio from "./components/Portfolio";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop"; // Import ScrollToTop component
 
 function App() {
   return (
     <Router>
+      <ScrollToTop /> {/* Add ScrollToTop component */}
       <ToastContainer />
       <div className="App">
         <Header />
