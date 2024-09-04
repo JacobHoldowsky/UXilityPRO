@@ -19,7 +19,7 @@ function AboutPage() {
         <div className="about-team-member">
           <img
             className="about-team-member-image"
-            src="me-min.jpeg"
+            src="me.jpeg"
             alt="Yaakov Holdowsky"
           />
           <div className="about-team-member-info">
