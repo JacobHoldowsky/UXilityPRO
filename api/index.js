@@ -17,12 +17,13 @@ app.use(express.json());
 const transporter = nodemailer.createTransport({
   host: process.env.MAIL_SERVER,
   port: process.env.MAIL_PORT,
-  secure: process.env.MAIL_USE_TLS === "true",
+  secure: process.env.MAIL_USE_TLS === "true", // Use TLS if true
   auth: {
     user: process.env.MAIL_USERNAME,
     pass: process.env.MAIL_PASSWORD,
   },
 });
+
 
 // Define routes
 app.get("/", (req, res) => {
