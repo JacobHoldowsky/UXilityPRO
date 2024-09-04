@@ -20,6 +20,10 @@
   .footer-section {
     flex: 1 1 300px; /* Increased base width for better alignment */
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   .footer-heading {

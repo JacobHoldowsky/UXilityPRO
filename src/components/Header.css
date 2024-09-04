@@ -7,10 +7,10 @@
   width: 100%;
   background-color: #fff;
   color: #333;
-  padding: 10px 0;
+  padding: 15px 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  transition: all 0.3s ease; /* Smooth transition for the header */
+  transition: all 0.3s ease;
 }
 
 .header-container {
@@ -28,30 +28,32 @@
 }
 
 .header-logo-img {
-  height: 60px;
+  height: 50px;
   border-radius: 50%;
-  transition: transform 0.3s ease; /* Smooth hover effect */
+  transition: transform 0.3s ease;
 }
 
-.logo-img:hover {
-  transform: scale(1.1); /* Scale effect on hover */
+.header-logo-img:hover {
+  transform: scale(1.1);
 }
 
 .header-nav {
   flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .header-nav-list {
   display: flex;
-  gap: 40px;
+  gap: 30px;
   list-style: none;
   padding: 0;
   margin: 0;
-  justify-content: flex-end;
 }
 
 .header-nav-item {
-  position: relative; /* Position for hover effect */
+  position: relative;
 }
 
 .header-nav-link {
@@ -60,32 +62,67 @@
   font-weight: 500;
   font-size: 1rem;
   padding: 8px 0;
-  transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth hover effect */
+  transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 .header-nav-link:hover {
-  color: #007bff; /* Change color on hover */
-  border-bottom: 2px solid #007bff; /* Underline effect on hover */
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+  display: none; /* Hidden on larger screens */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.menu-icon {
+  font-size: 2rem;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
   .header-container {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
-  .logo-img {
-    height: 50px; /* Adjust logo size for smaller screens */
+  .header-nav {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #fff;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    z-index: 1001;
+  }
+
+  .header-nav.open {
+    display: flex; /* Show when mobile menu is open */
   }
 
   .header-nav-list {
     flex-direction: column;
-    align-items: center;
-    gap: 20px; /* Reduce gap for smaller screens */
-    margin-top: 10px;
+    gap: 15px;
   }
 
   .header-nav-link {
-    font-size: 1.2rem; /* Adjust font size for smaller screens */
+    font-size: 1.1rem;
+  }
+
+  .mobile-menu-toggle {
+    display: block; /* Show the toggle button */
+  }
+
+  .header-logo-img {
+    height: 45px; /* Adjust logo size for smaller screens */
   }
 }

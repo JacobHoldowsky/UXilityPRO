@@ -31,17 +31,6 @@ function ServicesPage() {
       ],
     },
 
-    "Content Delivery Network (CDN)": {
-      header: "Content Delivery Network (CDN)",
-      imageURL: "cdn-min.jpg",
-      smallDescription:
-        "Accelerate your site's performance with a global CDN",
-      paragraphs: [
-        "Accelerate your site's performance and improve user experience with our Content Delivery Network (CDN) service. By caching content on servers located strategically around the world, we ensure that your website loads quickly for users regardless of their geographic location.",
-        "Our CDN minimizes latency and reduces server load, resulting in faster page load times and improved responsiveness. With our global network of servers, you can deliver content to your audience with lightning-fast speed and reliability.",
-        "Experience the benefits of a CDN for your website today. Contact us to learn more about how our CDN service can optimize your web performance and enhance user satisfaction.",
-      ],
-    },
     "Website Hosting": {
       header: "Website Hosting",
       imageURL: "websiteHosting-min.jpg",
