@@ -11,6 +11,13 @@ function TestimonialsSection() {
       website: "https://www.prettypresentsbychana.com",
       logo: "prettyPresentsLogo-min.png", // Add the path to the logo image here
     },
+    {
+      id: 2,
+      text: "Working with UXilityPRO was an absolute pleasure. From the initial consultation to the final delivery, they displayed professionalism, creativity, and a deep understanding of my needs. The website crafted for me not only exceeded my expectations but also helped elevate my online presence significantly. The attention to detail and commitment to excellence truly sets them apart. I highly recommend UXilityPRO to anyone seeking exceptional web solutions.",
+      author: "Batya S.",
+      website: "https://www.tandbeeliquidgold.com",
+      logo: "prettyPresentsLogo-min.png", // Add the path to the logo image here
+    },
   ];
 
   return (

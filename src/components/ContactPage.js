@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; // Import the styles
-import "./ContactPage.css"; // Import the CSS file for styling
+import "react-toastify/dist/ReactToastify.css";
+import "./ContactPage.css";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -11,36 +11,25 @@ const ContactForm = () => {
     message: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Handle input changes with validation
   const handleChange = (e) => {
     const { name, value } = e.target;
-    let error = "";
-
-    // Email validation regex pattern
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (name === "email" && !emailPattern.test(value)) {
-      error = "Invalid email address";
-    }
-
-    setFormData({
-      ...formData,
-      [name]: value,
-      error: error,
-    });
+    setFormData({ ...formData, [name]: value });
   };
 
+  // Environment-based API URL
   const apiUrl =
     process.env.NODE_ENV === "development" ? "http://localhost:5000" : "";
 
+  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Disable the submit button to prevent double submission
-    const submitButton = e.target.querySelector('input[type="submit"]');
-    submitButton.disabled = true;
+    setIsSubmitting(true);
 
     try {
-      const token = process.env.VERCEL_ACCESS_TOKEN; // Access the environment variable
+      const token = process.env.VERCEL_ACCESS_TOKEN;
       const response = await fetch(apiUrl + "/send-email", {
         method: "POST",
         headers: {
@@ -49,9 +38,10 @@ const ContactForm = () => {
         },
         body: JSON.stringify(formData),
       });
+
       if (response.ok) {
         const data = await response.json();
-        toast.success(data.message); // Success notification
+        toast.success(data.message);
         setFormData({
           name: "",
           email: "",
@@ -63,63 +53,74 @@ const ContactForm = () => {
       }
     } catch (error) {
       console.error("Error sending email:", error.message);
-      toast.error("Failed to send email"); // Error notification
+      toast.error("Failed to send email. Please try again.");
     } finally {
-      // Re-enable the submit button after submission is processed
-      submitButton.disabled = false;
+      setIsSubmitting(false);
     }
   };
 
   return (
-    <div className="container">
-      <h2>Ready to elevate your online presence?</h2>
+    <div className="contact-container">
+      <h2 className="contact-heading">Let's Elevate Your Online Presence</h2>
       <p className="contact-description">
-        We're excited to learn more about your needs. Please fill out the form
-        below, and we'll be in touch shortly to discuss how we can work
-        together.
+        We're excited to learn more about your project! Fill out the form below, and we'll get back to you promptly to discuss how we can collaborate and achieve your goals.
       </p>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
+      <form onSubmit={handleSubmit} className="contact-form">
+        <div className="form-group">
+          <label htmlFor="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Enter your name"
+            required
+          />
+        </div>
 
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Enter your email"
+            required
+          />
+        </div>
 
-        <label htmlFor="number">Number</label>
-        <input
-          type="tel"
-          id="number"
-          name="number"
-          value={formData.number}
-          onChange={handleChange}
-          required
-        />
+        <div className="form-group">
+          <label htmlFor="number">Phone Number</label>
+          <input
+            type="tel"
+            id="number"
+            name="number"
+            value={formData.number}
+            onChange={handleChange}
+            placeholder="Enter your phone number"
+            required
+          />
+        </div>
 
-        <label htmlFor="message">Message</label>
-        <textarea
-          id="message"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          rows="4"
-          required
-        ></textarea>
+        <div className="form-group">
+          <label htmlFor="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            placeholder="Tell us about your project"
+            rows="4"
+            required
+          ></textarea>
+        </div>
 
-        <input type="submit" value="Submit" />
+        <button type="submit" className="btn-submit" disabled={isSubmitting}>
+          {isSubmitting ? "Submitting..." : "Submit"}
+        </button>
       </form>
     </div>
   );

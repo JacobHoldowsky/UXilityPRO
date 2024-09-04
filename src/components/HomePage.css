@@ -1,0 +1,273 @@
+src/components/HomePage.css
+
+.homepage-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .homepage-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../public/websiteHosting-min.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #fff;
+    margin-bottom: 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .homepage-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+  }
+  
+  .homepage-hero-title {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  
+  .homepage-btn-primary,
+  .homepage-btn-secondary {
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: 2px solid transparent;
+    cursor: pointer;
+  }
+  
+  .homepage-btn-primary {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .homepage-btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .homepage-btn-secondary {
+    background-color: #61acfb;
+    color: #fff;
+  }
+  
+  .homepage-btn-secondary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .homepage-features {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .homepage-section-title {
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+  }
+  
+  .homepage-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+    padding: 0 10px;
+  }
+  
+  .homepage-feature-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  
+  .homepage-feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  .homepage-feature-icon {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 15px;
+  }
+  
+  .homepage-feature-title {
+    font-size: 1.6rem;
+    color: #0056b3;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .homepage-feature-description {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    max-width: 320px;
+  }
+  
+  .homepage-services-btn {
+    margin-top: 50px;
+  }
+  
+  .homepage-testimonials {
+    background-color: #f9f9f9;    
+    padding: 80px 0;
+    text-align: center;
+  }
+
+  .testimonial {
+    background-color: #fff;    
+  }
+
+
+
+  /* Why Choose Us Section */
+.homepage-why-choose-us {
+    padding: 80px 0;
+    background-color: #fff; /* White background for contrast */
+    text-align: center;
+  }
+  
+  .homepage-why-choose-us-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+    padding: 0 10px;
+  }
+  
+  .why-choose-us-card {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .why-choose-us-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  .why-choose-us-icon {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 15px;
+  }
+  
+  .why-choose-us-title {
+    font-size: 1.6rem;
+    color: #0056b3;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .why-choose-us-description {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  
+  /* Call to Action Section */
+.homepage-call-to-action {
+    padding: 80px 20px;
+    background-color: #007bff; /* Primary color for impact */
+    color: #fff; /* White text for contrast */
+    text-align: center;
+  }
+  
+  .homepage-call-to-action .homepage-section-title {
+    color: #fff; /* Ensures title color is white */
+  }
+  
+  .call-to-action-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 20px auto 40px;
+    color: #fff; /* Ensures description color is white */
+  }
+  
+  /* Reuse button styles for consistency */
+  .homepage-call-to-action .homepage-btn-primary {
+    background-color: #fff;
+    color: #007bff;
+    padding: 14px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .homepage-call-to-action .homepage-btn-primary:hover {
+    background-color: #0056b3;
+    color: #fff;
+    border-color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  
+  @media screen and (max-width: 767px) {
+    .homepage-hero {
+      height: 70vh;
+    }
+  
+    .homepage-hero-title {
+      font-size: 2rem;
+    }
+  
+    .homepage-features-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .homepage-btn-primary,
+    .homepage-btn-secondary {
+      font-size: 0.9rem;
+      padding: 8px 20px;
+    }
+  }
+  

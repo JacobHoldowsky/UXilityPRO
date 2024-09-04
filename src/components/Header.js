@@ -1,3 +1,5 @@
+// src/components/Header.js
+
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
@@ -5,32 +7,39 @@ import "./Header.css";
 function Header() {
   return (
     <header className="header">
-      <Link to="/" className="logo">
-        <img
-          className="logo-img"
-          src="UXilityPROLogo.png"
-          alt="UXilityPRO Logo"
-        />
-      </Link>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/services">Services</Link>
-          </li>
-          <li>
-            <Link to="/portfolio">Portfolio</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </nav>
+      <div className="header-container">
+        <Link to="/" className="header-logo">
+          <img
+            className="header-logo-img"
+            src="UXilityPROLogo.png"
+            alt="UXilityPRO Logo"
+          />
+        </Link>
+        <nav className="header-nav">
+          <ul className="header-nav-list">
+            <li className="header-nav-item">
+              <Link to="/services" className="header-nav-link">
+                Services
+              </Link>
+            </li>
+            <li className="header-nav-item">
+              <Link to="/portfolio" className="header-nav-link">
+                Portfolio
+              </Link>
+            </li>
+            <li className="header-nav-item">
+              <Link to="/about" className="header-nav-link">
+                About
+              </Link>
+            </li>
+            <li className="header-nav-item">
+              <Link to="/contact" className="header-nav-link">
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 }

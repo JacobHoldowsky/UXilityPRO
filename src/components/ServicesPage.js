@@ -30,6 +30,18 @@ function ServicesPage() {
         "Get in touch with us to learn more about our responsive web development services and take your online presence to the next level.",
       ],
     },
+
+    "Content Delivery Network (CDN)": {
+      header: "Content Delivery Network (CDN)",
+      imageURL: "cdn-min.jpg",
+      smallDescription:
+        "Accelerate your site's performance with a global CDN",
+      paragraphs: [
+        "Accelerate your site's performance and improve user experience with our Content Delivery Network (CDN) service. By caching content on servers located strategically around the world, we ensure that your website loads quickly for users regardless of their geographic location.",
+        "Our CDN minimizes latency and reduces server load, resulting in faster page load times and improved responsiveness. With our global network of servers, you can deliver content to your audience with lightning-fast speed and reliability.",
+        "Experience the benefits of a CDN for your website today. Contact us to learn more about how our CDN service can optimize your web performance and enhance user satisfaction.",
+      ],
+    },
     "Website Hosting": {
       header: "Website Hosting",
       imageURL: "websiteHosting-min.jpg",
@@ -39,17 +51,6 @@ function ServicesPage() {
         "Ensure your website is always online with our reliable website hosting solutions. We offer high-performance hosting services that guarantee uptime and fast loading times for your visitors.",
         "Our hosting packages are designed to meet the needs of businesses of all sizes. Whether you're running a small blog or managing a large e-commerce store, we have the infrastructure and expertise to support your website hosting requirements.",
         "With our secure and scalable hosting solutions, you can focus on growing your online presence while we take care of the technical aspects. Contact us today to learn more about our website hosting services.",
-      ],
-    },
-    "Content Delivery Network (CDN)": {
-      header: "Content Delivery Network (CDN)",
-      imageURL: "cdn-min.jpg",
-      smallDescription:
-        "Accelerate your website's performance with a global CDN",
-      paragraphs: [
-        "Accelerate your website's performance and improve user experience with our Content Delivery Network (CDN) service. By caching content on servers located strategically around the world, we ensure that your website loads quickly for users regardless of their geographic location.",
-        "Our CDN minimizes latency and reduces server load, resulting in faster page load times and improved responsiveness. With our global network of servers, you can deliver content to your audience with lightning-fast speed and reliability.",
-        "Experience the benefits of a CDN for your website today. Contact us to learn more about how our CDN service can optimize your web performance and enhance user satisfaction.",
       ],
     },
     "SEO Service": {
@@ -90,62 +91,53 @@ function ServicesPage() {
   const openModal = (content) => {
     setSelectedContent(content);
     setModalOpen(true);
-    // Disable scrolling in the background when the modal is open
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = "hidden"; // Prevent background scroll
   };
 
   const closeModal = () => {
     setModalOpen(false);
-    // Enable scrolling in the background when the modal is closed
-    document.body.style.overflow = "auto";
+    document.body.style.overflow = "auto"; // Enable background scroll
   };
 
   useEffect(() => {
-    // Scroll to the top of the page
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0); // Scroll to the top on mount
 
-    // Cleanup function to enable scrolling in the background when the component unmounts
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = "auto"; // Reset on unmount
     };
-  }, []); // Empty dependency array ensures the effect runs only once when the component mounts
+  }, []);
 
   useEffect(() => {
-    // Add or remove 'modal-open' class from body based on modalOpen state
     if (modalOpen) {
       document.body.classList.add("modal-open");
     } else {
       document.body.classList.remove("modal-open");
     }
 
-    // Cleanup function to remove the class when component unmounts
     return () => {
       document.body.classList.remove("modal-open");
     };
   }, [modalOpen]);
 
-  const handleModalClick = (e) => {
-    // Stop event propagation when clicking inside the modal content
-    e.stopPropagation();
-  };
+  const handleModalClick = (e) => e.stopPropagation(); // Prevent modal close on inner click
 
   return (
     <div className="services-page">
       <h1>Our Services</h1>
-      <div className="service-grid">
+      <div className="services-page-service-grid">
         {Object.keys(serviceDetails).map((serviceName) => (
-          <div className="service-category" key={serviceName}>
-            <div className="service">
+          <div className="services-page-service-category" key={serviceName}>
+            <div className="services-page-service">
               <h3>{serviceName}</h3>
               <img
                 src={serviceDetails[serviceName].imageURL}
-                alt="service"
+                alt={serviceName}
                 onClick={() => openModal(serviceDetails[serviceName])}
               />
               <p>{serviceDetails[serviceName]["smallDescription"]}</p>
               <button
                 onClick={() => openModal(serviceDetails[serviceName])}
-                className="btn-primary"
+                className="services-page-btn-primary"
               >
                 Learn More
               </button>
@@ -154,27 +146,31 @@ function ServicesPage() {
         ))}
       </div>
       {modalOpen && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal" onClick={handleModalClick}>
-            <div className="modal-content">
+        <div className="services-page-modal-overlay" onClick={closeModal}>
+          <div className="services-page-modal" onClick={handleModalClick}>
+            <div className="services-page-modal-content">
               <h2>{selectedContent.header}</h2>
-              <img src={selectedContent.imageURL} alt="service" />
+              <img
+                src={selectedContent.imageURL}
+                alt={selectedContent.header}
+              />
               {selectedContent.paragraphs.map((paragraph, index) => (
-                <>
-                  <p key={index}>{paragraph}</p>
-                  <br />
-                </>
+                <p key={index}>{paragraph}</p>
               ))}
             </div>
-            <div className="modal-buttons">
-              <button onClick={closeModal} className="btn-primary">
+            <div className="services-page-modal-buttons">
+              <button
+                onClick={closeModal}
+                className="services-page-btn-primary"
+              >
                 Close
               </button>
-              <button className="btn-primary">
-                <Link className="no-link-style" to="/contact">
-                  Get in Touch
-                </Link>
-              </button>
+              <Link
+                to="/contact"
+                className="services-page-btn-primary no-link-style"
+              >
+                Get in Touch
+              </Link>
             </div>
           </div>
         </div>

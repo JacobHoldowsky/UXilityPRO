@@ -1,51 +1,103 @@
-.container {
-  max-width: 500px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* src/components/ContactPage.css */
+
+/* General Container Styling */
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-h2 {
+/* Heading Styling */
+.contact-heading {
+  font-size: 2.2rem;
+  color: #1a1a1a;
   text-align: center;
   margin-bottom: 20px;
+  font-weight: 700;
 }
 
-.contact-description{
+/* Description Styling */
+.contact-description {
+  font-size: 1.1rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Form Styling */
+.contact-form {
   display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-  text-align: center;
+  flex-direction: column;
+  gap: 20px;
 }
 
-label {
-  font-weight: bold;
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
+/* Input and Textarea Styling */
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
   border-radius: 5px;
-  box-sizing: border-box;
-  resize: none;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+  font-family: inherit; /* Inherit font from parent */
 }
 
-input[type="submit"] {
-  background-color: #4caf50;
+/* Set a fixed size for the textarea */
+.contact-form textarea {
+  height: 120px; /* Fixed height */
+  resize: none; /* Prevent resizing */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007bff;
+}
+
+/* Submit Button Styling */
+.btn-submit {
+  padding: 14px;
+  background-color: #007bff;
   color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
   border: none;
-  padding: 15px 20px;
-  cursor: pointer;
   border-radius: 5px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover {
-  background-color: #45a049;
+.btn-submit:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+  .contact-container {
+    padding: 30px 15px;
+  }
+
+  .contact-heading {
+    font-size: 1.8rem;
+  }
+
+  .contact-description {
+    font-size: 1rem;
+  }
 }

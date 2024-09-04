@@ -6,13 +6,20 @@ function PortfolioPage() {
   const [selectedContent, setSelectedContent] = useState(null);
 
   const portfolioDetails = {
-    "Pretty Presents by Chana": {
-      imageURL: "prettyPresentsLogo.png",
+    "T&Bee Liquid Gold": {
+      imageURL: "tnbLiquidGoldLogo-min.png",
+      websiteURL: "https://tandbeeliquidgold.com",
       description:
-        "Designed and developed the online presence for Pretty Presents by Chana, a professional gift curation business. The website showcases our expertise in creating visually appealing and user-friendly platforms to enhance brand visibility and customer engagement. From elegant design elements to seamless navigation, our portfolio includes this project as a testament to our skills in web development. Visit now to explore our work firsthand!",
+        "Developed a robust e-commerce platform for T&Bee Liquid Gold, a premium honey business. The website features a seamless shopping experience with Stripe payment integration for secure transactions, AWS for optimized image storage and fast loading times, and dynamic currency conversion that fetches live USD to Shekel exchange rates. With a focus on beautiful UX/UI, the site provides a user-friendly and visually appealing interface, ensuring a smooth and engaging customer journey from browsing to checkout.",
     },
 
-    // Add content for other projects here
+    "Pretty Presents by Chana": {
+      imageURL: "prettyPresentsLogo-min.png",
+      websiteURL: "https://prettypresentsbychana.com",
+      description:
+        "Created an online platform for Pretty Presents by Chana, a professional gift curation service. The website is designed to captivate visitors with an elegant and intuitive UX/UI, providing a seamless browsing experience. Key features include an easy-to-navigate catalog showcasing various curated gift collections, a custom-built contact form for personalized gift requests, and integrated social media links to enhance brand presence. Optimized for performance and mobile responsiveness, the website ensures fast loading times and accessibility across all devices, effectively engaging customers and driving business growth.",
+    },
+    // Add more projects here...
   };
 
   useEffect(() => {
@@ -37,25 +44,34 @@ function PortfolioPage() {
   }, [modalOpen]);
 
   return (
-    <div className="projects-page">
+    <div className="portfolio-portfolio-page">
       <h1>Our Portfolio</h1>
-      <div className="project-grid">
+      <div className="portfolio-portfolio-grid">
         {Object.keys(portfolioDetails).map((project) => (
-          <div className="project-category" key={project}>
-            <div className="project">
+          <div className="portfolio-portfolio-item" key={project}>
+            <div className="portfolio-project-card">
               <img
                 src={portfolioDetails[project].imageURL}
-                alt="project"
+                alt={project}
+                className="portfolio-project-image"
                 onClick={() =>
-                  window.open("https://prettypresentsbychana.com", "_blank")
+                  window.open(
+                    `${portfolioDetails[project].websiteURL}`,
+                    "_blank"
+                  )
                 }
               />
-              <p>{portfolioDetails[project]["description"]}</p>
+              <p className="portfolio-project-description">
+                {portfolioDetails[project]["description"]}
+              </p>
               <button
                 onClick={() =>
-                  window.open("https://prettypresentsbychana.com", "_blank")
+                  window.open(
+                    `${portfolioDetails[project].websiteURL}`,
+                    "_blank"
+                  )
                 }
-                className="btn-primary"
+                className="portfolio-btn-primary"
               >
                 Visit now
               </button>

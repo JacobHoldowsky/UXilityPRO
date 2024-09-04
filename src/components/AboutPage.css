@@ -1,101 +1,101 @@
-/* Reset styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-/* Body styles */
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
-}
 
 /* Container styles */
-.about-page {
+.about-about-page {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px 20px;
 }
 
 /* Section styles */
-.about-page section {
-  margin-bottom: 0px;
+.about-about-page section {
+  margin-bottom: 40px;
   padding: 20px; /* Add padding for better spacing */
+  background-color: #f9f9f9; /* Light background for sections */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
 }
 
-.about-page section h2 {
-  font-size: 2rem;
+.about-about-page section h2 {
+  font-size: 2.2rem;
   margin-bottom: 20px;
+  color: #333;
+  font-weight: 700;
 }
 
-.about-page section p {
+.about-page section p,
+.about-about-page section li {
   font-size: 1.1rem;
-  line-height: 1.6;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 15px;
 }
 
 /* Team member styles */
-.team-member {
+.about-team-member {
   margin-bottom: 20px;
-  display: flex; /* Adjust alignment for better layout */
+  display: flex;
   align-items: center;
 }
 
-.team-member img {
-  width: 100px;
-  height: 100px;
+.about-team-member img {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   margin-right: 20px;
-}
-
-/* Testimonial styles */
-.testimonial {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.testimonial p {
-  font-style: italic;
+.about-team-member-info {
+  max-width: 800px; /* Restrict width for better readability */
 }
 
-/* Contact information styles */
-.contact-info {
-  font-size: 1.2rem;
+.about-team-member-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #0056b3;
 }
 
-.contact-info a {
-  color: #007bff;
-  text-decoration: none;
+.about-team-member-info p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
 }
 
-.contact-info a:hover {
-  text-decoration: underline;
+/* List styles */
+.section-values ul,
+.about-section-approach ol {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.section-values ul li,
+.about-section-approach ol li {
+  margin-bottom: 10px;
 }
 
 /* Media queries for responsive design */
-@media screen and (max-width: 767px) {
-  .about-page section {
-      padding: 10px; /* Adjust section padding for smaller screens */
+@about-media screen and (max-width: 767px) {
+  .about-about-page section {
+    padding: 15px;
   }
 
-  .about-page section h2 {
-      font-size: 1.8rem; /* Adjust heading font size for smaller screens */
+  .about-about-page section h2 {
+    font-size: 1.8rem;
   }
 
-  .about-page section p {
-      font-size: 1rem; /* Adjust paragraph font size for smaller screens */
+  .about-page section p,
+  .about-about-page section li {
+    font-size: 1rem;
   }
 
-  .team-member img {
-      width: 80px;
-      height: 80px;
-      margin-right: 10px;
+  .about-team-member img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
   }
 
-  .contact-info {
-      font-size: 1rem; /* Adjust contact info font size for smaller screens */
+  .about-team-member-info {
+    max-width: 100%;
   }
 }

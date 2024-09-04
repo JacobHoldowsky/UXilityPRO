@@ -1,186 +1,176 @@
-/* Styling for the services page */
+/* src/components/ServicesPage.css */
+
+/* General Page Styling */
 .services-page {
-    padding: 20px;
-    background-size:cover;
-    background-position: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .services-page h1 {
-    font-size: 36px;
-  }
-  
-  /* Styling for the service grid */
-  .service-grid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin: 20px 0px;
-  }
-  
-  /* Styling for each service category */
-  .service {
-    width: 480px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .service img {
-    width: 100%; /* Make the image fill its container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 15px;
-    cursor: pointer;
-  }
-  
-  /* Styling for service titles */
-  .service h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-  }
-  
-  /* Styling for service descriptions */
-  .service p {
-    font-size: 1rem;
-    color: #666;
-    margin: 20px 0px 10px 0px;
-    
-  }
-  
-  /* Styling for the "Learn More" button */
-  .service .btn-primary {
-    background-color: #007bff;
-    color: #fff;
-    font-size: 1rem;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .service .btn-primary:hover {
-    background-color: #0056b3;
-  }
-  
-
-/* Styling for the modal overlay */
-.modal-overlay {
-    position: fixed; /* Position fixed to cover the entire viewport */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    display: flex; /* Flex container to center the modal vertically and horizontally */
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    z-index: 10000;
-  }
-  
-  /* Styling for the modal container */
-  .modal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff; /* Background color of the modal */
-    padding: 50px; /* Padding around the modal content */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
-    max-width: 50%; /* Maximum width of the modal */
-    max-height: 90%; /* Maximum height of the modal */
-  }
-
-  .modal-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Styling for the modal title */
-  .modal h2 {
-    font-size: 2rem; /* Font size */
-    color: #333; /* Text color */
-    margin-bottom: 20px; /* Spacing below the title */
-  }
-
-  .modal img {
-    width: 300px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-  }
-
-  .no-link-style {
-    text-decoration: none; /* Remove the underline */
-    color: inherit; /* Inherit the color from the surrounding text or button */
-  }
-  
-  /* Styling for the modal paragraphs */
-  .modal p {
-    font-size: 1rem; /* Font size */
-    color: #666; /* Text color */
-    margin-bottom: 0px; /* Spacing below paragraphs */
-    text-align: left;
-    max-width: 600px;
-  }
-  
-  /* Styling for the close button */
-  .modal .btn-primary {
-    display: block; /* Make the button a block element to center it */
-    margin-top: 20px; /* Spacing above the button */
-    background-color: #007bff; /* Button background color */
-    color: #fff; /* Button text color */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 10px 20px; /* Padding */
-    cursor: pointer; /* Cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth transition */
-  }
-  
-  /* Hover state for the close button */
-  .modal .btn-primary:hover {
-    background-color: #0056b3; /* Darker background color on hover */
-  }
-
-  /* CSS for the modal buttons */
-.modal-buttons {
+  padding: 40px 20px;
+  background-color: #f3f4f6; /* Light background for contrast */
   display: flex;
-  justify-content: flex-end; /* Align buttons to the right */
-  margin-top: 0px; /* Add some space between buttons and content */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.modal-buttons button {
-  margin-left: 10px; /* Add space between buttons */
+.services-page-services-page h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+  font-weight: 700;
 }
 
-  
-  
-  /* Responsive styles */
-  @media screen and (max-width: 768px) {
-    /* Adjustments for smaller screens */
-    .service {
-      margin-bottom: 30px;
-    }
-    
-    .service h3 {
-      font-size: 1.3rem;
-    }
-  
-    .service p {
-      font-size: 0.9rem;
-    }
+/* Service Grid Styling */
+.services-page-service-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px; /* Increased gap for more space */
+  margin: 40px 0;
+}
+
+/* Individual Service Styling */
+.services-page-service {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  justify-content: space-between;
+}
+
+.services-page-service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.services-page-service img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.services-page-service h3 {
+  font-size: 1.8rem;
+  color: #0056b3;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.services-page-service p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.services-page-btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.services-page-btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Modal Styling */
+.services-page-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.services-page-modal {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.services-page-modal-content {
+  margin-bottom: 20px;
+}
+
+.services-page-modal h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.services-page-modal img {
+  width: 80%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.services-page-modal p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.services-page-no-link-style {
+  text-decoration: none;
+  color: inherit;
+}
+
+.services-page-modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Responsive Styling */
+@services-page-media screen and (max-width: 768px) {
+  .services-page-service {
+    max-width: 100%;
   }
-  
+
+  .services-page-service h3 {
+    font-size: 1.5rem;
+  }
+
+  .services-page-service p {
+    font-size: 0.9rem;
+  }
+
+  .services-page-modal {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .services-page-modal img {
+    width: 100%;
+  }
+}
