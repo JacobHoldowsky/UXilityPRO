@@ -1,17 +1,12 @@
-// src/components/Header.js
-
-import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
-import "./Header.css";
+import React, { useState, useEffect, useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import './Header.css';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const menuRef = useRef(null); // Reference for the menu container
-
-  // Toggle mobile menu visibility
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+  const menuRef = useRef(null);
+  const location = useLocation();
 
   // Close mobile menu when clicking outside
   useEffect(() => {
@@ -21,66 +16,58 @@ function Header() {
       }
     };
 
-    // Add event listener
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
 
-    // Remove event listener on cleanup
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location]);
 
   return (
     <header className="header">
       <div className="header-container">
-        <Link to="/" className="header-logo">
+        <Link to="/" className="header-logo" aria-label="UXilityPRO Home">
           <img
             className="header-logo-img"
-            src="UXilityPROLogo.png"
+            src="ai-logo.jpg"
             alt="UXilityPRO Logo"
           />
         </Link>
-        <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>
-          <span className="menu-icon">&#9776;</span> {/* Hamburger Icon */}
+        <button
+          className="mobile-menu-toggle"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle navigation menu"
+        >
+          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
         <nav
-          ref={menuRef} // Attach the ref to the nav element
-          className={`header-nav ${isMobileMenuOpen ? "open" : ""}`}
+          ref={menuRef}
+          className={`header-nav ${isMobileMenuOpen ? 'open' : ''}`}
+          aria-label="Primary Navigation"
         >
           <ul className="header-nav-list">
             <li className="header-nav-item">
-              <Link
-                to="/services"
-                className="header-nav-link"
-                onClick={toggleMobileMenu}
-              >
+              <Link to="/services" className="header-nav-link">
                 Services
               </Link>
             </li>
             <li className="header-nav-item">
-              <Link
-                to="/portfolio"
-                className="header-nav-link"
-                onClick={toggleMobileMenu}
-              >
+              <Link to="/portfolio" className="header-nav-link">
                 Portfolio
               </Link>
             </li>
             <li className="header-nav-item">
-              <Link
-                to="/about"
-                className="header-nav-link"
-                onClick={toggleMobileMenu}
-              >
+              <Link to="/about" className="header-nav-link">
                 About
               </Link>
             </li>
             <li className="header-nav-item">
-              <Link
-                to="/contact"
-                className="header-nav-link"
-                onClick={toggleMobileMenu}
-              >
+              <Link to="/contact" className="header-nav-link">
                 Contact
               </Link>
             </li>

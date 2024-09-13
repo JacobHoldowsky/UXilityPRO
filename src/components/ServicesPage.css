@@ -1,176 +1,231 @@
 /* src/components/ServicesPage.css */
 
-/* General Page Styling */
-.services-page {
-  padding: 40px 20px;
-  background-color: #f3f4f6; /* Light background for contrast */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.services-page-services-page h1 {
-  font-size: 2.5rem;
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
   color: #333;
-  margin-bottom: 40px;
-  font-weight: 700;
 }
 
-/* Service Grid Styling */
-.services-page-service-grid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 30px; /* Increased gap for more space */
-  margin: 40px 0;
+.services-page {
+  padding: 60px 20px;
+  background-color: #f7f7f7;
 }
 
-/* Individual Service Styling */
-.services-page-service {
-  width: 100%;
-  max-width: 400px;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.services-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 500px;
-  justify-content: space-between;
 }
 
-.services-page-service:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.services-page-service img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-bottom: 15px;
-}
-
-.services-page-service h3 {
-  font-size: 1.8rem;
-  color: #0056b3;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.services-page-service p {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.services-page-btn-primary {
-  background-color: #007bff;
-  color: #fff;
-  font-size: 1rem;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-  margin-top: 10px;
+.services-page-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  position: relative;
   display: inline-block;
 }
 
-.services-page-btn-primary:hover {
-  background-color: #0056b3;
+.services-page-title::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: #2a79aa;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-/* Modal Styling */
-.services-page-modal-overlay {
+/* Services Grid */
+.services-page-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.service-card {
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 300px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.service-card-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.service-card-description {
+  font-size: 1rem;
+  color: #666;
+  flex-grow: 1;
+}
+
+.service-card-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #2a79aa;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.service-card-btn:hover {
+  background-color: #225f88;
+}
+
+/* Modal Styles */
+.modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
 
-.services-page-modal {
+.modal {
   background-color: #fff;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
+  border-radius: 15px;
+  max-width: 800px;
   width: 90%;
   max-height: 90vh;
   overflow-y: auto;
+  position: relative;
+  padding: 40px 20px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #666;
+  cursor: pointer;
+}
+
+.modal-close-btn:hover {
+  color: #2a79aa;
+}
+
+.modal-content {
   text-align: center;
 }
 
-.services-page-modal-content {
-  margin-bottom: 20px;
-}
-
-.services-page-modal h2 {
+.modal-title {
   font-size: 2rem;
   color: #333;
   margin-bottom: 20px;
 }
 
-.services-page-modal img {
-  width: 80%;
+.modal-image {
+  width: 100%;
+  max-width: 600px;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-.services-page-modal p {
+.modal-paragraph {
   font-size: 1rem;
   color: #666;
-  margin-bottom: 15px;
   text-align: left;
-  line-height: 1.5;
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
-.services-page-no-link-style {
+.modal-buttons {
+  margin-top: 30px;
+}
+
+.modal-btn {
+  padding: 12px 35px;
+  background-color: #2a79aa;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
   text-decoration: none;
-  color: inherit;
+  transition: background-color 0.3s ease;
 }
 
-.services-page-modal-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
+.modal-btn:hover {
+  background-color: #225f88;
 }
 
-/* Responsive Styling */
-@services-page-media screen and (max-width: 768px) {
-  .services-page-service {
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .service-card {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .service-card-image {
+    height: 180px;
+  }
+
+  .modal {
+    padding: 30px 15px;
+  }
+
+  .modal-title {
+    font-size: 1.8rem;
+  }
+
+  .modal-image {
     max-width: 100%;
   }
+}
 
-  .services-page-service h3 {
-    font-size: 1.5rem;
+@media (max-width: 576px) {
+  .service-card-content {
+    padding: 15px;
   }
 
-  .services-page-service p {
-    font-size: 0.9rem;
+  .service-card-title {
+    font-size: 1.3rem;
   }
 
-  .services-page-modal {
-    padding: 20px;
-    max-width: 90%;
+  .modal-title {
+    font-size: 1.6rem;
   }
 
-  .services-page-modal img {
-    width: 100%;
+  .modal-close-btn {
+    font-size: 1.8rem;
   }
 }

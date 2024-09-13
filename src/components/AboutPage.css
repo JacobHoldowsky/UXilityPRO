@@ -1,101 +1,270 @@
+/* src/components/AboutPage.css */
 
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
 
-/* Container styles */
-.about-about-page {
+.about-page {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 60px 20px;
 }
 
-/* Section styles */
-.about-about-page section {
+/* Section Titles */
+.section-title {
+  font-size: 2.5rem;
   margin-bottom: 40px;
-  padding: 20px; /* Add padding for better spacing */
-  background-color: #f9f9f9; /* Light background for sections */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
-}
-
-.about-about-page section h2 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
   color: #333;
-  font-weight: 700;
+  position: relative;
+  text-align: center;
 }
 
-.about-page section p,
-.about-about-page section li {
-  font-size: 1.1rem;
+.section-title::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: #2a79aa;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Introduction Section */
+.introduction-section {
+  background-image: url('../../public/ai-logo.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 150px 20px;
+  color: #fff;
+  position: relative;
+}
+
+.introduction-section::before {
+  content: '';
+  background-color: rgba(0,0,0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.introduction-content {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.introduction-content .section-title {
+  color: #fff;
+}
+
+.introduction-content .section-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-top: 20px;
+}
+
+/* Founder Section */
+.founder-section {
+  padding: 60px 0;
+}
+
+.founder-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.founder-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.founder-info {
+  flex: 1;
+}
+
+.founder-name {
+  font-size: 2rem;
+  color: #2a79aa;
+  margin-bottom: 10px;
+}
+
+.founder-title {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.founder-description {
+  font-size: 1rem;
   line-height: 1.8;
   color: #555;
+}
+
+/* Values Section */
+.values-section {
+  background-color: #f7f7f7;
+  padding: 60px 20px;
+}
+
+.values-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.value-card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.value-icon {
+  font-size: 3rem;
+  color: #2a79aa;
+  margin-bottom: 20px;
+}
+
+.value-title {
+  font-size: 1.5rem;
+  color: #333;
   margin-bottom: 15px;
 }
 
-/* Team member styles */
-.about-team-member {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.about-team-member img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-right: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.about-team-member-info {
-  max-width: 800px; /* Restrict width for better readability */
-}
-
-.about-team-member-info h3 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  color: #0056b3;
-}
-
-.about-team-member-info p {
+.value-text {
   font-size: 1rem;
   color: #666;
   line-height: 1.6;
 }
 
-/* List styles */
-.section-values ul,
-.about-section-approach ol {
-  margin-top: 20px;
-  padding-left: 20px;
+/* Approach Section */
+.approach-section {
+  padding: 60px 0;
 }
 
-.section-values ul li,
-.about-section-approach ol li {
-  margin-bottom: 10px;
+.approach-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
 }
 
-/* Media queries for responsive design */
-@about-media screen and (max-width: 767px) {
-  .about-about-page section {
-    padding: 15px;
+.approach-step {
+  background-color: #f7f7f7;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  flex: 1;
+  min-width: 250px;
+  position: relative;
+}
+
+.step-number {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2a79aa;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.step-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.step-text {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .founder-content {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .about-about-page section h2 {
+  .founder-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .values-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .approach-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .approach-step {
+    margin-top: 60px;
+  }
+
+  .step-number {
+    top: -30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .founder-name {
     font-size: 1.8rem;
   }
 
-  .about-page section p,
-  .about-about-page section li {
+  .founder-title {
     font-size: 1rem;
   }
 
-  .about-team-member img {
-    width: 80px;
-    height: 80px;
-    margin-right: 10px;
+  .value-title,
+  .step-title {
+    font-size: 1.3rem;
   }
 
-  .about-team-member-info {
-    max-width: 100%;
+  .value-icon {
+    font-size: 2.5rem;
+  }
+
+  .step-number {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 1rem;
   }
 }

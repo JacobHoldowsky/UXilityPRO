@@ -1,7 +1,8 @@
+// src/components/ServicesPage.js
+
 import React, { useEffect, useState } from "react";
 import "./ServicesPage.css";
-import { button, Link } from "react-router-dom";
-import CustomWebDesignServiceDetails from "./CustomWebDesignServiceDetails";
+import { Link } from "react-router-dom";
 
 function ServicesPage() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -80,19 +81,18 @@ function ServicesPage() {
   const openModal = (content) => {
     setSelectedContent(content);
     setModalOpen(true);
-    document.body.style.overflow = "hidden"; // Prevent background scroll
+    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
     setModalOpen(false);
-    document.body.style.overflow = "auto"; // Enable background scroll
+    document.body.style.overflow = "auto";
   };
 
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top on mount
-
+    window.scrollTo(0, 0);
     return () => {
-      document.body.style.overflow = "auto"; // Reset on unmount
+      document.body.style.overflow = "auto";
     };
   }, []);
 
@@ -102,64 +102,70 @@ function ServicesPage() {
     } else {
       document.body.classList.remove("modal-open");
     }
-
     return () => {
       document.body.classList.remove("modal-open");
     };
   }, [modalOpen]);
 
-  const handleModalClick = (e) => e.stopPropagation(); // Prevent modal close on inner click
+  const handleModalClick = (e) => e.stopPropagation();
 
   return (
     <div className="services-page">
-      <h1>Our Services</h1>
-      <div className="services-page-service-grid">
-        {Object.keys(serviceDetails).map((serviceName) => (
-          <div className="services-page-service-category" key={serviceName}>
-            <div className="services-page-service">
-              <h3>{serviceName}</h3>
+      <div className="services-page-container">
+        <h1 className="services-page-title">Our Services</h1>
+        <div className="services-page-grid">
+          {Object.keys(serviceDetails).map((serviceName) => (
+            <div className="service-card" key={serviceName}>
               <img
                 src={serviceDetails[serviceName].imageURL}
                 alt={serviceName}
+                className="service-card-image"
                 onClick={() => openModal(serviceDetails[serviceName])}
               />
-              <p>{serviceDetails[serviceName]["smallDescription"]}</p>
-              <button
-                onClick={() => openModal(serviceDetails[serviceName])}
-                className="services-page-btn-primary"
-              >
-                Learn More
-              </button>
+              <div className="service-card-content">
+                <h3 className="service-card-title">{serviceName}</h3>
+                <p className="service-card-description">
+                  {serviceDetails[serviceName].smallDescription}
+                </p>
+                <button
+                  onClick={() => openModal(serviceDetails[serviceName])}
+                  className="service-card-btn"
+                >
+                  Learn More
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
+
       {modalOpen && (
-        <div className="services-page-modal-overlay" onClick={closeModal}>
-          <div className="services-page-modal" onClick={handleModalClick}>
-            <div className="services-page-modal-content">
-              <h2>{selectedContent.header}</h2>
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal" onClick={handleModalClick}>
+            <button
+              className="modal-close-btn"
+              onClick={closeModal}
+              aria-label="Close Modal"
+            >
+              &times;
+            </button>
+            <div className="modal-content">
+              <h2 className="modal-title">{selectedContent.header}</h2>
               <img
                 src={selectedContent.imageURL}
                 alt={selectedContent.header}
+                className="modal-image"
               />
               {selectedContent.paragraphs.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
+                <p key={index} className="modal-paragraph">
+                  {paragraph}
+                </p>
               ))}
-            </div>
-            <div className="services-page-modal-buttons">
-              <button
-                onClick={closeModal}
-                className="services-page-btn-primary"
-              >
-                Close
-              </button>
-              <Link
-                to="/contact"
-                className="services-page-btn-primary no-link-style"
-              >
-                Get in Touch
-              </Link>
+              <div className="modal-buttons">
+                <Link to="/contact" className="modal-btn">
+                  Get in Touch
+                </Link>
+              </div>
             </div>
           </div>
         </div>

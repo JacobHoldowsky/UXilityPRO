@@ -1,16 +1,12 @@
-/* src/components/Header.css */
-
-/* Common styles for all screen sizes */
+/* General Styles */
 .header {
   position: sticky;
   top: 0;
   width: 100%;
   background-color: #fff;
-  color: #333;
   padding: 15px 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  transition: all 0.3s ease;
 }
 
 .header-container {
@@ -29,18 +25,15 @@
 
 .header-logo-img {
   height: 50px;
-  border-radius: 50%;
   transition: transform 0.3s ease;
 }
 
 .header-logo-img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .header-nav {
-  flex: 1;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
 }
 
@@ -48,8 +41,8 @@
   display: flex;
   gap: 30px;
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .header-nav-item {
@@ -62,17 +55,29 @@
   font-weight: 500;
   font-size: 1rem;
   padding: 8px 0;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.header-nav-link::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #2a79aa;
+  transition: width 0.3s ease;
+  margin-top: 5px;
 }
 
 .header-nav-link:hover {
-  color: #007bff;
-  border-bottom: 2px solid #007bff;
+  color: #2a79aa;
 }
 
-/* Mobile Menu Toggle Button */
+.header-nav-link:hover::after {
+  width: 100%;
+}
+
 .mobile-menu-toggle {
-  display: none; /* Hidden on larger screens */
+  display: none;
   background: none;
   border: none;
   font-size: 1.5rem;
@@ -80,49 +85,37 @@
   color: #333;
 }
 
-.menu-icon {
-  font-size: 2rem;
-}
-
-/* Responsive Styles */
+/* Mobile Menu Styles */
 @media (max-width: 768px) {
-  .header-container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
   .header-nav {
-    display: none; /* Hidden by default */
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 20px;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100%;
     background-color: #fff;
-    width: 200px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 20px;
-    z-index: 1001;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
   }
 
   .header-nav.open {
-    display: flex; /* Show when mobile menu is open */
+    right: 0;
   }
 
   .header-nav-list {
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
   }
 
   .header-nav-link {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .mobile-menu-toggle {
-    display: block; /* Show the toggle button */
-  }
-
-  .header-logo-img {
-    height: 45px; /* Adjust logo size for smaller screens */
+    display: block;
   }
 }
