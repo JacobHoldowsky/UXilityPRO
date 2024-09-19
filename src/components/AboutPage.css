@@ -37,6 +37,7 @@ body {
   background-image: url('../../public/ai-logo.jpg');
   background-size: cover;
   background-position: center;
+  border-radius: 15px;
   padding: 150px 20px;
   color: #fff;
   position: relative;
@@ -46,6 +47,7 @@ body {
   content: '';
   background-color: rgba(0,0,0, 0.3);
   position: absolute;
+  border-radius: 15px;
   top: 0;
   left: 0;
   right: 0;

@@ -16,7 +16,7 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
-  background-image: url("../../public/city.webp");
+  background-image: url("../../public/ai-hero.webp");
   background-size: cover;
   background-position: center;
   height: 90vh;

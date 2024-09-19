@@ -26,6 +26,7 @@
 .header-logo-img {
   height: 50px;
   transition: transform 0.3s ease;
+  border-radius: 10px;
 }
 
 .header-logo-img:hover {
