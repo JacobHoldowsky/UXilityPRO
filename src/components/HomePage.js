@@ -114,6 +114,11 @@ const WhyChooseUsSection = () => (
           <WhyChooseUsCard key={index} reason={reason} />
         ))}
       </div>
+      <div className="homepage-services-btn">
+        <Link to="/portfolio" className="homepage-btn-secondary" aria-label="Explore Our Portfolio">
+          Explore Our Portfolio
+        </Link>
+      </div>
     </div>
   </section>
 );
