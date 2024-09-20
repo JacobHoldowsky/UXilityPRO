@@ -14,12 +14,14 @@ import AboutPage from "./components/AboutPage";
 import Portfolio from "./components/Portfolio";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop"; // Import ScrollToTop component
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
     <Router>
       <ScrollToTop /> {/* Add ScrollToTop component */}
       <ToastContainer />
+      <Analytics />
       <div className="App">
         <Header />
         <Routes>
