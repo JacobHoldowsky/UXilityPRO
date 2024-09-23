@@ -23,11 +23,7 @@ function AboutPage() {
       <section className="founder-section">
         <h2 className="section-title">Meet the Founder</h2>
         <div className="founder-content">
-          <img
-            src="me.jpeg"
-            alt="Yaakov Holdowsky"
-            className="founder-image"
-          />
+          <img src="me.jpeg" alt="Yaakov Holdowsky" className="founder-image" />
           <div className="founder-info">
             <h3 className="founder-name">Yaakov Holdowsky</h3>
             <p className="founder-title">Founder</p>
@@ -75,8 +71,8 @@ function AboutPage() {
             <FaUsers className="value-icon" />
             <h3 className="value-title">Collaboration</h3>
             <p className="value-text">
-              We work closely with clients and stakeholders to co-create
-              experiences that exceed expectations.
+              We work closely with clients to co-create experiences that exceed
+              expectations.
             </p>
           </div>
         </div>
