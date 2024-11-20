@@ -34,8 +34,9 @@ body {
 
 /* Introduction Section */
 .introduction-section {
-  background-image: url('../../public/ai-logo.jpg');
-  background-size: cover;
+  background-image: url('../../public/newestCropped.png');
+  background-size:contain;
+  background-repeat: no-repeat;
   background-position: center;
   border-radius: 15px;
   padding: 150px 20px;
@@ -45,7 +46,7 @@ body {
 
 .introduction-section::before {
   content: '';
-  background-color: rgba(0,0,0, 0.3);
+  background-color: rgba(0,0,0, 0.5);
   position: absolute;
   border-radius: 15px;
   top: 0;

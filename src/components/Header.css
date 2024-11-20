@@ -4,7 +4,7 @@
   top: 0;
   width: 100%;
   background-color: #fff;
-  padding: 15px 0;
+  padding: 10px 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
@@ -24,7 +24,7 @@
 }
 
 .header-logo-img {
-  height: 50px;
+  height: 75px;
   transition: transform 0.3s ease;
   border-radius: 10px;
 }

@@ -34,7 +34,7 @@ function Header() {
         <Link to="/" className="header-logo" aria-label="UXilityPRO Home">
           <img
             className="header-logo-img"
-            src="ai-logo.jpg"
+            src="newestCropped.png"
             alt="UXilityPRO Logo"
           />
         </Link>
