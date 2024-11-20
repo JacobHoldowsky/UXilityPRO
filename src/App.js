@@ -7,7 +7,6 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import { Analytics } from "@vercel/analytics/react";
-import { Helmet } from "react-helmet";
 
 // Lazy loading components
 const HomePage = lazy(() => import("./components/HomePage"));
@@ -22,13 +21,11 @@ const Portfolio = lazy(() => import("./components/Portfolio"));
 function App() {
   return (
     <>
-      <Helmet>
         <title>My App - Web Development and Design</title>
         <meta
           name="description"
           content="Web development and design services."
         />
-      </Helmet>
       <ToastContainer /> {/* Moved outside Router */}
       <Analytics />
       <Router>
