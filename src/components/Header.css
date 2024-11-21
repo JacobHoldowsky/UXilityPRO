@@ -4,15 +4,15 @@
   top: 0;
   width: 100%;
   background-color: #fff;
-  padding: 10px 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 0px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000;
 }
 
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,9 +24,8 @@
 }
 
 .header-logo-img {
-  height: 75px;
+  height: 85px;
   transition: transform 0.3s ease;
-  border-radius: 10px;
 }
 
 .header-logo-img:hover {
@@ -64,13 +63,13 @@
   display: block;
   width: 0%;
   height: 2px;
-  background-color: #2a79aa;
+  background-color: #2a70f8;
   transition: width 0.3s ease;
   margin-top: 5px;
 }
 
 .header-nav-link:hover {
-  color: #2a79aa;
+  color: #2a70f8;
 }
 
 .header-nav-link:hover::after {

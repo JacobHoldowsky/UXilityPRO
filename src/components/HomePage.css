@@ -16,11 +16,11 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
-  background-image: url("../../public/ai-hero.webp");
+  background-image: url("../../public/image1.png");
   background-size: cover;
   background-position: center;
   height: 90vh;
-  color: #fff;
+  color: black;
   position: relative;
 }
 
@@ -31,7 +31,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0, 0.6); /* Using your brand color with opacity */
+  background-color: rgba(0,0,0, 0.02); /* Using your brand color with opacity */
 }
 
 .homepage-hero-content {
@@ -56,7 +56,7 @@ body {
 .homepage-btn-primary {
   padding: 15px 40px;
   border-radius: 30px;
-  background-color: #2a79aa; /* Your brand color */
+  background-color: #2a70f8; /* Your brand color */
   color: #fff;
   text-decoration: none;
   font-size: 1.1rem;
@@ -65,7 +65,7 @@ body {
 }
 
 .homepage-btn-primary:hover {
-  background-color: #225f88; /* Slightly darker shade for hover */
+  background-color: #0048d9; /* Slightly darker shade for hover */
 }
 
 /* Section Titles */
@@ -81,7 +81,7 @@ body {
   content: "";
   width: 50px;
   height: 4px;
-  background-color: #2a79aa; /* Your brand color */
+  background-color: #2a70f8; /* Your brand color */
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -118,7 +118,7 @@ body {
 
 .homepage-feature-icon {
   font-size: 3rem;
-  color: #2a79aa; /* Your brand color */
+  color: #2a70f8; /* Your brand color */
   margin-bottom: 20px;
 }
 
@@ -142,8 +142,8 @@ body {
   padding: 12px 35px;
   border-radius: 30px;
   background-color: transparent;
-  color: #2a79aa; /* Your brand color */
-  border: 2px solid #2a79aa; /* Your brand color */
+  color: #2a70f8; /* Your brand color */
+  border: 2px solid #2a70f8; /* Your brand color */
   text-decoration: none;
   font-size: 1rem;
   font-weight: 600;
@@ -151,7 +151,7 @@ body {
 }
 
 .homepage-btn-secondary:hover {
-  background-color: #2a79aa; /* Your brand color */
+  background-color: #2a70f8; /* Your brand color */
   color: #fff;
 }
 
@@ -185,7 +185,7 @@ body {
 
 .why-choose-us-icon {
   font-size: 3rem;
-  color: #2a79aa; /* Your brand color */
+  color: #2a70f8; /* Your brand color */
   margin-bottom: 20px;
 }
 
@@ -209,7 +209,7 @@ body {
 /* Call to Action Section */
 .homepage-call-to-action {
   padding: 60px 20px;
-  background-color: #2a79aa; /* Your brand color */
+  background-color: #2a70f8; /* Your brand color */
   color: #fff;
   text-align: center;
 }
@@ -227,7 +227,7 @@ body {
 
 .homepage-call-to-action .homepage-btn-primary {
   background-color: #fff;
-  color: #2a79aa; /* Your brand color */
+  color: #2a70f8; /* Your brand color */
   padding: 14px 40px;
   font-size: 1.1rem;
   font-weight: 600;
@@ -239,7 +239,7 @@ body {
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .homepage-hero-title {
     font-size: 2.5rem;
   }
@@ -252,6 +252,18 @@ body {
   .why-choose-us-card {
     width: 100%;
     max-width: 400px;
+  }
+
+  .homepage-hero {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-image: url("../../public/image.png");
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    color: black;
+    position: relative;
   }
 }
 
