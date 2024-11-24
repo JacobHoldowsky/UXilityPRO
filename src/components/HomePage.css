@@ -16,7 +16,7 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
-  background-image: url("../../public/Hero.png");
+  background-image: url("../../public/background9.png");
   background-size: cover;
   background-position: center;
   height: 90vh;
@@ -88,10 +88,30 @@ body {
   transform: translateX(-50%);
 }
 
+.call-to-action-section-title::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background-color: #ffa4d8; /* Your brand color */
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 /* Features Section */
 .homepage-features {
-  padding: 60px 0;
   background-color: #f7f7f7;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-image: url("../../public/background2.png");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  color: black;
+  position: relative;
 }
 
 .homepage-features-grid {
@@ -157,8 +177,16 @@ body {
 
 /* Why Choose Us Section */
 .homepage-why-choose-us {
-  padding: 60px 0;
   background-color: #fff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-image: url("../../public/background6.png");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  color: black;
+  position: relative;
 }
 
 .homepage-why-choose-us-grid {
@@ -202,8 +230,16 @@ body {
 
 /* Testimonials Section */
 .homepage-testimonials {
-  padding: 60px 0;
   background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-image: url("../../public/background8.png");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  color: black;
+  position: relative;
 }
 
 /* Call to Action Section */
@@ -212,6 +248,15 @@ body {
   background-color: #2a70f8; /* Your brand color */
   color: #fff;
   text-align: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-image: url("../../public/background11.png");
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  color: black;
+  position: relative;
 }
 
 .homepage-call-to-action .homepage-section-title {
@@ -223,6 +268,7 @@ body {
   margin: 20px auto 40px;
   max-width: 700px;
   line-height: 1.6;
+  color: white
 }
 
 .homepage-call-to-action .homepage-btn-primary {
