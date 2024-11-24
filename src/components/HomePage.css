@@ -16,7 +16,7 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
-  background-image: url("../../public/image1.png");
+  background-image: url("../../public/Hero.png");
   background-size: cover;
   background-position: center;
   height: 90vh;
