@@ -31,7 +31,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0, 0.02); /* Using your brand color with opacity */
+  background-color: rgba(0,0,0, 0); /* Using your brand color with opacity */
 }
 
 .homepage-hero-content {
@@ -81,7 +81,7 @@ body {
   content: "";
   width: 50px;
   height: 4px;
-  background-color: #2a70f8; /* Your brand color */
+  background-color: #333; /* Your brand color */
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -92,7 +92,7 @@ body {
   content: "";
   width: 50px;
   height: 4px;
-  background-color: #ffa4d8; /* Your brand color */
+  background-color: #4476f4; /* Your brand color */
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -101,17 +101,18 @@ body {
 
 /* Features Section */
 .homepage-features {
-  background-color: #f7f7f7;
-
+  background-color: #fff;
   display: flex;
   align-items: center;
   text-align: center;
-  background-image: url("../../public/background2.png");
+  background-image: url("../../public/bg3.png");
   background-size: cover;
   background-position: center;
-  height: 80vh;
+  background-repeat: no-repeat;
+  height: 100vh;
   color: black;
   position: relative;
+  padding-bottom: 100px;
 }
 
 .homepage-features-grid {
@@ -161,18 +162,18 @@ body {
 .homepage-btn-secondary {
   padding: 12px 35px;
   border-radius: 30px;
-  background-color: transparent;
-  color: #2a70f8; /* Your brand color */
-  border: 2px solid #2a70f8; /* Your brand color */
+  background-color: #dea5f0;
+  color: black; /* Your brand color */
+  border: 2px solid black; /* Your brand color */
   text-decoration: none;
   font-size: 1rem;
   font-weight: 600;
   transition: background-color 0.3s ease, color 0.3s ease;
+  
 }
 
 .homepage-btn-secondary:hover {
-  background-color: #2a70f8; /* Your brand color */
-  color: #fff;
+  background-color: #cc99dc; /* Your brand color */
 }
 
 /* Why Choose Us Section */
@@ -181,12 +182,13 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
-  background-image: url("../../public/background6.png");
+  background-image: url("../../public/bg7.png");
   background-size: cover;
   background-position: center;
-  height: 80vh;
+  height: 100vh;
   color: black;
   position: relative;
+  padding-bottom:100px;
 }
 
 .homepage-why-choose-us-grid {
@@ -230,14 +232,14 @@ body {
 
 /* Testimonials Section */
 .homepage-testimonials {
-  background-color: #f7f7f7;
   display: flex;
   align-items: center;
   text-align: center;
-  background-image: url("../../public/background8.png");
+  background-image: url("../../public/bg9.png");
   background-size: cover;
   background-position: center;
-  height: 80vh;
+  height: 95vh;
+  padding-bottom:200px;
   color: black;
   position: relative;
 }
@@ -251,10 +253,10 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
-  background-image: url("../../public/background11.png");
+  background-image: url("../../public/background15.png");
   background-size: cover;
-  background-position: center;
-  height: 50vh;
+  background-position: bottom;
+  height: 100vh;
   color: black;
   position: relative;
 }
@@ -272,8 +274,8 @@ body {
 }
 
 .homepage-call-to-action .homepage-btn-primary {
-  background-color: #fff;
-  color: #2a70f8; /* Your brand color */
+  background-color: white;
+  color: #4476f4; /* Your brand color */
   padding: 14px 40px;
   font-size: 1.1rem;
   font-weight: 600;
@@ -281,7 +283,7 @@ body {
 }
 
 .homepage-call-to-action .homepage-btn-primary:hover {
-  background-color: #f1f1f1;
+  background-color: #f0f5ff;
 }
 
 /* Responsive Styles */
