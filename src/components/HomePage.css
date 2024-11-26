@@ -184,8 +184,8 @@ body {
   text-align: center;
   background-image: url("../../public/bg7.png");
   background-size: cover;
-  background-position: center;
-  height: 100vh;
+  background-position: bottom;
+  height: 60vh;
   color: black;
   position: relative;
   padding-bottom:100px;
@@ -237,9 +237,9 @@ body {
   text-align: center;
   background-image: url("../../public/bg9.png");
   background-size: cover;
-  background-position: center;
-  height: 95vh;
-  padding-bottom:200px;
+  background-position: top;
+  height: 85vh;
+  padding-bottom:250px;
   color: black;
   position: relative;
 }
@@ -253,16 +253,17 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
-  background-image: url("../../public/background15.png");
+  background-image: url("../../public/bg12.png");
   background-size: cover;
   background-position: bottom;
-  height: 100vh;
+  height: 20vh;
+  padding-bottom: 375px;
   color: black;
   position: relative;
 }
 
 .homepage-call-to-action .homepage-section-title {
-  color: #fff;
+  color: #4476f4;
 }
 
 .call-to-action-description {
@@ -270,12 +271,12 @@ body {
   margin: 20px auto 40px;
   max-width: 700px;
   line-height: 1.6;
-  color: white
+  color: black
 }
 
 .homepage-call-to-action .homepage-btn-primary {
-  background-color: white;
-  color: #4476f4; /* Your brand color */
+  background-color: #4476f4;
+  color: white; /* Your brand color */
   padding: 14px 40px;
   font-size: 1.1rem;
   font-weight: 600;
@@ -283,7 +284,7 @@ body {
 }
 
 .homepage-call-to-action .homepage-btn-primary:hover {
-  background-color: #f0f5ff;
+  background-color: #5e8cff;
 }
 
 /* Responsive Styles */
