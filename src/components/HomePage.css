@@ -16,11 +16,12 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
-  background-image: url("../../public/background9.png");
-  background-size: cover;
+  background-image: url("../../public/bg15.png");
+  background-size: contain;
   background-position: center;
   height: 90vh;
-  color: black;
+  color: white;
+  text-shadow: 1px  1px 0 black;
   position: relative;
 }
 
@@ -50,22 +51,23 @@ body {
 
 .homepage-hero-subtitle {
   font-size: 1.5rem;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 .homepage-btn-primary {
   padding: 15px 40px;
   border-radius: 30px;
-  background-color: #2a70f8; /* Your brand color */
+  background-color: #4476f4; /* Your brand color */
   color: #fff;
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 600;
   transition: background-color 0.3s ease;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3); /* Shadow properties */
 }
 
 .homepage-btn-primary:hover {
-  background-color: #0048d9; /* Slightly darker shade for hover */
+  background-color: #336aff; /* Slightly darker shade for hover */
 }
 
 /* Section Titles */
@@ -139,7 +141,7 @@ body {
 
 .homepage-feature-icon {
   font-size: 3rem;
-  color: #2a70f8; /* Your brand color */
+  color: #4476f4; /* Your brand color */
   margin-bottom: 20px;
 }
 
@@ -215,7 +217,7 @@ body {
 
 .why-choose-us-icon {
   font-size: 3rem;
-  color: #2a70f8; /* Your brand color */
+  color: #4476f4; /* Your brand color */
   margin-bottom: 20px;
 }
 
@@ -247,7 +249,7 @@ body {
 /* Call to Action Section */
 .homepage-call-to-action {
   padding: 60px 20px;
-  background-color: #2a70f8; /* Your brand color */
+  background-color: #4476f4; /* Your brand color */
   color: #fff;
   text-align: center;
   display: flex;
@@ -284,7 +286,7 @@ body {
 }
 
 .homepage-call-to-action .homepage-btn-primary:hover {
-  background-color: #5e8cff;
+  background-color: #336aff;
 }
 
 /* Responsive Styles */
