@@ -62,18 +62,25 @@ const HomePage = () => (
 
 const HeroSection = () => (
   <section className="homepage-hero">
-    <div className="homepage-hero-content">
-      <h1 className="homepage-hero-title">Empowering Your Online Presence</h1>
-      <p className="homepage-hero-subtitle">
-        Crafting modern websites that elevate your business.
-      </p>
-      <Link
-        to="/contact"
-        className="homepage-btn-primary"
-        aria-label="Get Started Today"
-      >
-        Get Started Today
-      </Link>
+    <div className="hero-container">
+      {/* Left Side: Text Content */}
+      <div className="homepage-hero-content">
+        <h1 className="homepage-hero-title">Empowering Your Online Presence</h1>
+        <p className="homepage-hero-subtitle text-4xl">
+          Crafting modern websites that elevate your business.
+        </p>
+        <div className="flex">
+          <i className="fa-solid fa-arrow-right"></i>
+          <Link
+            to="/contact"
+            className="homepage-btn-primary"
+            aria-label="Get Started Today"
+          >
+            Get Started Today
+          </Link>
+          <i className="fa-solid fa-arrow-left"></i>
+        </div>
+      </div>
     </div>
   </section>
 );
@@ -168,13 +175,17 @@ const CallToActionSection = () => (
         journey toward a stronger, more effective online presence. We're here to
         help you grow and succeed!
       </p>
-      <Link
-        to="/contact"
-        className="homepage-btn-primary"
-        aria-label="Contact Us Now"
-      >
-        Contact Us Now
-      </Link>
+      <div className="flex">
+        <i className="fa-solid fa-arrow-right"></i>
+        <Link
+          to="/contact"
+          className="homepage-btn-primary"
+          aria-label="Contact Us Now"
+        >
+          Contact Us Now
+        </Link>
+        <i className="fa-solid fa-arrow-left"></i>
+      </div>
     </div>
   </section>
 );
