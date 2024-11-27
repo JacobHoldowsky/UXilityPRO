@@ -65,9 +65,9 @@ const HeroSection = () => (
     <div className="hero-container">
       {/* Left Side: Text Content */}
       <div className="homepage-hero-content">
-        <h1 className="homepage-hero-title">Empowering Your Online Presence</h1>
+        <h1 className="homepage-hero-title">Empowering Your Online <span className='highlight'>Presence</span></h1>
         <p className="homepage-hero-subtitle text-4xl">
-          Crafting modern websites that elevate your business.
+          Crafting <span className="highlight">modern websites</span> that <span className='highlight'>elevate</span> your business.
         </p>
         <div className="flex">
           <i className="fa-solid fa-arrow-right"></i>
@@ -88,7 +88,10 @@ const HeroSection = () => (
 const FeaturesSection = () => (
   <section className="homepage-features">
     <div className="homepage-container">
-      <h2 className="homepage-section-title">Our Core Features</h2>
+      <h2 className="homepage-section-title">Ready to Up Your Online Game?</h2>
+      <h3 className="homepage-section-subtitle">Here's what we bring to the table</h3>
+      <i className="fa-solid fa-arrow-down"></i>
+
       <div className="homepage-features-grid">
         {featuresData.map((feature, index) => (
           <FeatureCard key={index} feature={feature} />
@@ -124,7 +127,11 @@ const WhyChooseUsSection = () => (
   <section className="homepage-why-choose-us">
     <div className="homepage-container">
       <h2 className="homepage-section-title">Why Choose Us?</h2>
+      <h3 className="homepage-section-subtitle">Here's what makes us stand out</h3>
+      <i className="fa-solid fa-arrow-down"></i>
+
       <div className="homepage-why-choose-us-grid">
+        
         {whyChooseUsData.map((reason, index) => (
           <WhyChooseUsCard key={index} reason={reason} />
         ))}
@@ -158,7 +165,10 @@ const WhyChooseUsCard = ({ reason }) => {
 const TestimonialsSection = () => (
   <section className="homepage-testimonials">
     <div className="homepage-container">
-      <h2 className="homepage-section-title">What Our Clients Say</h2>
+      <h2 className="homepage-section-title">Don't Just Take It From Us</h2>
+      <h2 className="homepage-section-subtitle">Here's what our clients say</h2>
+      <i className="fa-solid fa-arrow-down"></i>
+
       <TestimonialSection />
     </div>
   </section>
@@ -168,7 +178,7 @@ const CallToActionSection = () => (
   <section className="homepage-call-to-action">
     <div className="homepage-container">
       <h2 className="homepage-section-title call-to-action-section-title ">
-        Ready to Transform Your Online Presence?
+        Ready to Transform Your Online <div className='presence'>Presence</div>?
       </h2>
       <p className="call-to-action-description">
         Let’s take the next step together. Contact us today to start your
