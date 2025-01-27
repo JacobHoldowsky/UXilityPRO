@@ -109,7 +109,6 @@ body {
   text-shadow: 1px 1px 1px #4476f4;
 }
 
-
 .flex {
   animation: float 3s infinite ease-in-out; /* Adjust duration and repetition */
   text-shadow: 1px 1px 3px #ffa4d8;
@@ -288,11 +287,10 @@ body {
 
 .testimonial {
   background-color: rgba(68, 118, 244, .2);
-  
 }
+
 .testimonial-author {
   color: #4476f4;
-  
 }
 
 /* Call to Action Section */
@@ -334,6 +332,7 @@ body {
   background-color: #618bff;
 }
 
+/* Responsive Styles */
 @media (max-width: 1050px) {
   .homepage-section-title {
     font-size: 2.2rem !important;
@@ -412,8 +411,8 @@ body {
 
 @media (max-width: 576px) {
   .hero-background-card {
-    padding: 20px;
-    max-width: 200px;
+    padding: 40px;
+    max-width: 70%;
   }
 
   .homepage-hero-title {
@@ -429,7 +428,7 @@ body {
   }
 
   .homepage-btn-primary {
-    padding: 15px 10px;
+    padding: 15px 15px !important;
     display: inline-block; /* Required for transform animations */
     margin-top: 20px;
   }

@@ -8,15 +8,19 @@ function AboutPage() {
   return (
     <div className="about-page">
       <section className="introduction-section">
+      <h2 className="section-title">About Us</h2>
         <div className="introduction-content">
-          <h1 className="section-title">Welcome to UXilityPRO</h1>
-          <p className="section-text">
-            At UXilityPRO, we are dedicated to crafting visually stunning and
-            highly functional websites that help small businesses thrive online.
-            Our mission is to deliver innovative solutions paired with
-            exceptional service, ensuring every client achieves their digital
-            goals with ease.
-          </p>
+          <img
+            src="UXilityPROLogoBest.svg"
+            alt="Introduction"
+            className="introduction-image"
+          />
+          <div className="introduction-text">
+
+            <p className="section-text">
+              Welcome to UXilityPRO, where we specialize in creating beautiful, functional, and user-friendly websites that help businesses thrive online. Our team of experienced designers and developers is dedicated to delivering high-quality web solutions tailored to your unique needs.
+            </p>
+          </div>
         </div>
       </section>
 

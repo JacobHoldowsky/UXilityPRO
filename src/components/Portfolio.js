@@ -15,11 +15,11 @@ function PortfolioPage() {
       description:
         "Developed a sophisticated e-commerce platform for T&Bee Liquid Gold, a premium honey brand. The website offers a seamless shopping experience with integrated Stripe payments for secure transactions, AWS-based image storage for optimal performance, and real-time currency conversion for a global audience. The refined UX/UI ensures an intuitive, engaging customer journey from browsing to checkout.",
     },
-    "Pretty Presents by Chana": {
-      imageURL: "prettyPresentsLogo-min.png",
-      websiteURL: "https://prettypresentsbychana.com",
+    "Roots Rockland": {
+      imageURL: "rootsLogo2.png",
+      websiteURL: "https://rootsrockland.com",
       description:
-        "Created an online platform for Pretty Presents by Chana, a gift curation service. The site features an elegant and user-friendly design, showcasing curated gift collections. Enhanced with mobile responsiveness and fast loading times, the platform effectively engages customers and boosts brand visibility.",
+        "Designed and developed a professional website for Roots Rockland, a therapy practice. The site features a calming and welcoming design, providing information about services, therapist profiles, and appointment scheduling. Enhanced with mobile responsiveness and fast loading times, the platform ensures a smooth user experience for clients seeking mental health support.",
     },
     // Add more projects here...
   };
@@ -62,6 +62,7 @@ function PortfolioPage() {
                 />
                 <div className="portfolio-card-content">
                   <h3 className="portfolio-card-title">{projectName}</h3>
+                  
                   <p className="portfolio-card-description">
                     {projectData.description.length > 100
                       ? projectData.description.substring(0, 100) + "..."
@@ -73,6 +74,7 @@ function PortfolioPage() {
                   >
                     View Details
                   </button>
+
                 </div>
               </div>
             )
