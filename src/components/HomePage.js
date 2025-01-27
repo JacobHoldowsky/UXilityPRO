@@ -1,6 +1,4 @@
 import React from "react";
-import Lottie from "lottie-react";
-import animation from "../assets/animations/First Project.json";
 import { Link } from "react-router-dom";
 import TestimonialSection from "./TestimonialSection";
 import "./HomePage.css";
@@ -12,6 +10,7 @@ import {
   FaAward,
   FaHeadset,
 } from "react-icons/fa";
+import Header from "./Header";
 
 const featuresData = [
   {
@@ -54,6 +53,7 @@ const whyChooseUsData = [
 
 const HomePage = () => (
   <>
+    <Header />
     <HeroSection />
     <FeaturesSection />
     <WhyChooseUsSection />
@@ -65,31 +65,32 @@ const HomePage = () => (
 const HeroSection = () => (
   <section className="homepage-hero">
     <div className="hero-container">
-      {/* Left Side: Text Content */}
-      <div className="homepage-hero-content">
-        <h1 className="homepage-hero-title">
-          Empowering Your Online <span className="highlight">Presence</span>
-        </h1>
-        <p className="homepage-hero-subtitle text-4xl">
-          Crafting <span className="highlight">modern websites</span> that{" "}
-          <span className="highlight">elevate</span> your business.
-        </p>
-        <div className="flex">
-          <i className="fa-solid fa-arrow-right"></i>
-          <Link
-            to="/contact"
-            className="homepage-btn-primary"
-            aria-label="Get Started Today"
-          >
-            Get Started Today
-          </Link>
-          <i className="fa-solid fa-arrow-left"></i>
+      <div className="hero-background-card">
+        {/* Left Side: Text Content */}
+        <div className="homepage-hero-content">
+          <h1 className="homepage-hero-title">
+            Empowering Your Online <span className="highlight">Presence</span>
+          </h1>
+          <p className="homepage-hero-subtitle text-4xl">
+            Crafting <span className="highlight">modern websites</span> that{" "}
+            <span className="highlight">elevate</span> your business.
+          </p>
+          <div className="flex">
+            <i className="fa-solid fa-arrow-right"></i>
+            <Link
+              to="/contact"
+              className="homepage-btn-primary"
+              aria-label="Get Started Today"
+            >
+              Get Started Today
+            </Link>
+            <i className="fa-solid fa-arrow-left"></i>
+          </div>
         </div>
       </div>
-
       {/* Right Side: Animated SVG */}
       <div className="homepage-hero-animation">
-        <Lottie animationData={animation} loop={true} autoplay={true} />
+        {/* Include your SVG animation here */}
       </div>
     </div>
   </section>
@@ -98,10 +99,14 @@ const HeroSection = () => (
 const FeaturesSection = () => (
   <section className="homepage-features">
     <div className="homepage-container">
-      <h2 className="homepage-section-title">Ready to Up Your Online Game?</h2>
-      <h3 className="homepage-section-subtitle">
-        Here's what we bring to the table
-      </h3>
+      <h2 className="homepage-section-title">
+        Ready to <span className="highlight">Up</span> Your{" "}
+        <span className="highlight">Online Game</span>?
+      </h2>
+      <p className="homepage-section-subtitle">
+        Here's what we
+        <span className="highlight"> bring to the table</span>
+      </p>
       <i className="fa-solid fa-arrow-down"></i>
 
       <div className="homepage-features-grid">
@@ -138,10 +143,13 @@ const FeatureCard = ({ feature }) => {
 const WhyChooseUsSection = () => (
   <section className="homepage-why-choose-us">
     <div className="homepage-container">
-      <h2 className="homepage-section-title">Why Choose Us?</h2>
-      <h3 className="homepage-section-subtitle">
-        Here's what makes us stand out
-      </h3>
+      <h2 className="homepage-section-title">
+        Why <span className="highlight">Choose</span> Us?
+      </h2>
+      <p className="homepage-section-subtitle">
+        Here's what makes us
+        <span className="highlight"> stand out</span>
+      </p>
       <i className="fa-solid fa-arrow-down"></i>
 
       <div className="homepage-why-choose-us-grid">
@@ -179,7 +187,10 @@ const TestimonialsSection = () => (
   <section className="homepage-testimonials">
     <div className="homepage-container">
       <h2 className="homepage-section-title">Don't Just Take It From Us</h2>
-      <h2 className="homepage-section-subtitle">Here's what our clients say</h2>
+      <p className="homepage-section-subtitle">
+        Here's what our <span className="highlight">clients </span>
+        say
+      </p>
       <i className="fa-solid fa-arrow-down"></i>
 
       <TestimonialSection />
@@ -190,8 +201,9 @@ const TestimonialsSection = () => (
 const CallToActionSection = () => (
   <section className="homepage-call-to-action">
     <div className="homepage-container">
-      <h2 className="homepage-section-title call-to-action-section-title ">
-        Ready to Transform Your Online <div className="presence">Presence</div>?
+      <h2 className="homepage-section-title">
+        Ready to <span className="highlight">Transform</span> Your{" "}
+        <span className="highlight">Online Presence</span>?
       </h2>
       <p className="call-to-action-description">
         Let’s take the next step together. Contact us today to start your

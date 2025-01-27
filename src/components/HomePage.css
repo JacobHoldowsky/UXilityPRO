@@ -1,7 +1,6 @@
 /* General Styles */
 body {
   font-family: 'Roboto', sans-serif;
-  color: #333;
   margin: 0;
 }
 
@@ -11,16 +10,19 @@ body {
   padding: 0 20px;
 }
 
-.hero-container{
-display: flex;
-align-items: center;
-justify-content: center;
-width: 100%;
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .homepage-hero-animation {
-  width: 50vw;
-  border-radius: 15px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Hero Section */
@@ -28,42 +30,67 @@ width: 100%;
   display: flex;
   align-items: center;
   text-align: center;
-  
-  background-size: contain;
-  background-position: center;
+  background-image: url("../../public/bg29.png");
+  background-size: cover;
+  background-position: bottom;
   background-repeat: no-repeat;
   height: 90vh;
   color: #4476f4;
-  text-shadow: 1px  1px 3px #ffa4d8;
-  position: relative;
+  text-shadow: 1px 1px 3px rgb(255, 164, 216);
 }
 
-
-
-.homepage-hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0, 0); /* Using your brand color with opacity */
-}
-
-.homepage-hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 700px;
+.hero-background-card {
+  background: rgba(249, 249, 249, 0.95); /* Semi-transparent white background */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
-  margin-bottom: 100px;
+}
+
+.homepage-btn-primary, .site-link {
+  padding: 15px 40px;
+  border-radius: 30px;
+  background-color: rgb(68, 118, 244); /* Your brand color */
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3); /* Shadow properties */
+  animation: float 3s infinite ease-in-out; /* Adjust duration and repetition */
+  display: inline-block; /* Required for transform animations */
+  margin-top: 20px;
+}
+
+.homepage-btn-secondary {
+  padding: 12px 35px;
+  border-radius: 30px;
+  background-color: rgba(255, 164, 216, .8);
+  border: 2px solid black; /* Your brand color */
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: rgba(0, 0, 0, .8);
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3); /* Shadow properties */
+  animation: float 3s infinite ease-in-out; /* Adjust duration and repetition */
+  display: inline-block; /* Required for transform animations */
+}
+
+.homepage-btn-primary:hover, .site-link:hover {
+  background-color: rgb(97, 139, 255); /* Slightly darker shade for hover */
+}
+
+.homepage-btn-secondary:hover {
+  background-color: rgba(255, 181, 224, 1); /* Your brand color */
 }
 
 .homepage-hero-title {
   font-size: 3rem;
   margin-bottom: 20px;
   font-weight: bold;
-  margin-bottom: 30px
+  margin-bottom: 30px;
 }
 
 .homepage-hero-subtitle {
@@ -73,61 +100,41 @@ width: 100%;
 
 .homepage-section-subtitle {
   font-size: 2rem;
-  color: #333;
-  text-shadow: 1px  1px 3px #ffa4d8;
+  color: #4476f4;
+  text-shadow: 1px 1px 1px #ffa4d8;
 }
 
 .highlight {
   color: #ffa4d8 !important;
-  text-shadow: 1px  1px 1px #4476f4;
-
+  text-shadow: 1px 1px 1px #4476f4;
 }
 
-
-
-.homepage-btn-primary {
-  padding: 15px 40px;
-  border-radius: 30px;
-  background-color: #4476f4; /* Your brand color */
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3); /* Shadow properties */
-  animation: float 3s infinite ease-in-out; /* Adjust duration and repetition */
-  display: inline-block; /* Required for transform animations */
-
-}
 
 .flex {
   animation: float 3s infinite ease-in-out; /* Adjust duration and repetition */
-  text-shadow: 1px  1px 3px #ffa4d8;
-
+  text-shadow: 1px 1px 3px #ffa4d8;
 }
 
 .fa-arrow-right {
   font-size: 28px;
   margin-right: 18px;
   color: #4476f4;
-  text-shadow: 1px  1px 3px #ffa4d8;
+  text-shadow: 1px 1px 3px #ffa4d8;
 }
 
 .fa-arrow-down {
   font-size: 48px;
-  color: #333;
-  text-shadow: 1px  1px 3px #ffa4d8;
+  color: #4476f4;
+  text-shadow: 1px 1px 3px #ffa4d8;
   animation: float 2s infinite ease-in-out; /* Adjust duration and repetition */
-
 }
 
 .fa-arrow-left {
   font-size: 28px;
   margin-left: 18px;
   color: #4476f4;
-  text-shadow: 1px  1px 3px #ffa4d8;
+  text-shadow: 1px 1px 3px #ffa4d8;
 }
-
 
 @keyframes float {
   0%, 100% {
@@ -138,26 +145,20 @@ width: 100%;
   }
 }
 
-.homepage-btn-primary:hover {
-  background-color: #336aff; /* Slightly darker shade for hover */
-}
-
 /* Section Titles */
 .homepage-section-title {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #333;
   position: relative;
   display: inline-block;
-  text-shadow: 1px  1px 3px #ffa4d8;
-  
+  text-shadow: 1px 1px 3px rgb(255, 164, 216);
 }
 
 .homepage-section-title::after {
   content: "";
   width: 50px;
   height: 4px;
-  background-color: #333; /* Your brand color */
+  background-color: #4476f4; /* Your brand color */
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -177,20 +178,11 @@ width: 100%;
 
 /* Features Section */
 .homepage-features {
-  background-color: #fff;
-  padding-top:20px;
   display: flex;
   align-items: center;
   text-align: center;
-  background-image: url("../../public/bg3.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  color: black;
-  position: relative;
-  padding-bottom: 125px;
-  padding-top: 75px
+  color: #4476f4;
+  margin-bottom: 100px;
 }
 
 .homepage-features-grid {
@@ -202,7 +194,7 @@ width: 100%;
 }
 
 .homepage-feature-card {
-  background-color: #fff;
+  background-color: rgba(68, 118, 244, 0.2) !important;
   padding: 30px;
   border-radius: 15px;
   text-align: center;
@@ -217,19 +209,17 @@ width: 100%;
 
 .homepage-feature-icon {
   font-size: 3rem;
-  color: #4476f4; /* Your brand color */
+  color: rgb(68, 118, 244); /* Your brand color */
   margin-bottom: 20px;
 }
 
 .homepage-feature-title {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #333;
 }
 
 .homepage-feature-description {
   font-size: 1rem;
-  color: #666;
 }
 
 /* Services Button */
@@ -237,36 +227,18 @@ width: 100%;
   margin-top: 40px;
 }
 
-.homepage-btn-secondary {
-  padding: 12px 35px;
-  border-radius: 30px;
-  background-color: #dea5f0;
-  color: black; /* Your brand color */
-  border: 2px solid black; /* Your brand color */
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 600;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  
-}
-
-.homepage-btn-secondary:hover {
-  background-color: #cc99dc; /* Your brand color */
-}
-
 /* Why Choose Us Section */
 .homepage-why-choose-us {
-  background-color: #fff;
+  padding-top: 100px;
+  padding-bottom: 100px;
   display: flex;
   align-items: center;
   text-align: center;
-  background-image: url("../../public/bg7.png");
+  background-image: url("../../public/bg30.png");
   background-size: cover;
-  background-position: bottom;
-  height: 65vh;
-  color: black;
+  background-position: top;
   position: relative;
-  padding-bottom:200px;
+  color: #4476f4; /* Set the text color */
 }
 
 .homepage-why-choose-us-grid {
@@ -297,12 +269,6 @@ width: 100%;
   margin-bottom: 20px;
 }
 
-.why-choose-us-title {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #333;
-}
-
 .why-choose-us-description {
   font-size: 1rem;
   color: #666;
@@ -310,40 +276,42 @@ width: 100%;
 
 /* Testimonials Section */
 .homepage-testimonials {
+  padding-top: 20px;
   display: flex;
   align-items: center;
   text-align: center;
-  background-image: url("../../public/bg9.png");
   background-size: cover;
-  background-position: top;
-  height: 85vh;
-  padding-top: 75px;
-  padding-bottom:350px;
-  color: black;
-  position: relative;
+  background-position: center;
+  color: rgba(68, 118, 244, .9); /* Set the text color */
+  padding-bottom: 20px;
+}
+
+.testimonial {
+  background-color: rgba(68, 118, 244, .2);
+  
+}
+.testimonial-author {
+  color: #4476f4;
+  
 }
 
 /* Call to Action Section */
 .homepage-call-to-action {
-  padding: 60px 20px;
-  background-color: #4476f4; /* Your brand color */
+  background-color: rgb(68, 118, 244); /* Your brand color */
   color: #fff;
-  text-align: center;
   display: flex;
   align-items: center;
   text-align: center;
-  background-image: url("../../public/bg12.png");
+  justify-content: center;
+  background-image: url("../../public/bg31.png");
   background-size: cover;
-  background-position: bottom;
-  height: 30vh;
-  padding-top: 100px;
-  padding-bottom: 375px;
-  color: black;
-  position: relative;
+  background-position: top;
+  padding-top: 150px;
+  padding-bottom: 50px;
 }
 
 .homepage-call-to-action .homepage-section-title {
-  color: #4476f4;
+  color: #4476f4 !important;
 }
 
 .call-to-action-description {
@@ -351,7 +319,6 @@ width: 100%;
   margin: 20px auto 40px;
   max-width: 700px;
   line-height: 1.6;
-  color: black
 }
 
 .homepage-call-to-action .homepage-btn-primary {
@@ -364,10 +331,53 @@ width: 100%;
 }
 
 .homepage-call-to-action .homepage-btn-primary:hover {
-  background-color: #336aff;
+  background-color: #618bff;
 }
 
-/* Responsive Styles */
+@media (max-width: 1050px) {
+  .homepage-section-title {
+    font-size: 2.2rem !important;
+  }
+  .homepage-section-subtitle {
+    font-size: 1.4rem !important;
+  }
+
+  .homepage-feature-card, .why-choose-us-card {
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 15px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .homepage-features-grid, .homepage-why-choose-us-grid {
+    margin-top: 15px;
+    margin-bottom: 45px;
+  }
+
+  .homepage-hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .homepage-feature-title, .why-choose-us-title {
+    font-size: 1.2rem;
+    margin-bottom: 0px;
+  }
+
+  .homepage-feature-description, .why-choose-us-description {
+    font-size: 1rem;
+  }
+
+  .testimonial-text {
+    font-size: 1.1rem;
+  }
+
+  .testimonial-author {
+    font-size: 1.2rem;
+  }
+}
+
 @media (max-width: 800px) {
   .homepage-hero-title {
     font-size: 2.5rem;
@@ -383,30 +393,87 @@ width: 100%;
     max-width: 400px;
   }
 
-  .homepage-hero {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    background-image: url("../../public/image.png");
-    background-size: cover;
-    background-position: center;
-    height: 90vh;
-    color: black;
-    position: relative;
+  .homepage-features-grid {
+    gap: 20px; /* Reduce gap between feature cards */
+  }
+
+  .homepage-feature-card {
+    padding: 20px; /* Reduce padding for feature cards */
+  }
+
+  .homepage-feature-title {
+    font-size: 1.2rem; /* Reduce font size for feature titles */
+  }
+
+  .homepage-feature-description {
+    font-size: 0.9rem; /* Reduce font size for feature descriptions */
   }
 }
 
 @media (max-width: 576px) {
+  .hero-background-card {
+    padding: 20px;
+    max-width: 200px;
+  }
+
   .homepage-hero-title {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 
   .homepage-hero-subtitle {
     font-size: 1rem;
   }
 
+  .homepage-btn-primary {
+    font-size: 0.7rem;
+  }
+
+  .homepage-btn-primary {
+    padding: 15px 10px;
+    display: inline-block; /* Required for transform animations */
+    margin-top: 20px;
+  }
+
+  .homepage-hero-title {
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  .homepage-hero-subtitle {
+    margin-bottom: 20px;
+  }
+
+  .homepage-section-title {
+    font-size: 1.5rem !important;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px #ffa4d8;
+  }
+
+  .homepage-section-subtitle {
+    font-size: 1rem !important;
+  }
+
+  .fa-arrow-down {
+    font-size: 28px;
+  }
+
   .homepage-feature-card,
   .why-choose-us-card {
-    padding: 20px;
+    padding: 15px; /* Further reduce padding for feature cards */
+    width: 100%; /* Make feature cards full width */
+  }
+
+  .homepage-feature-icon {
+    font-size: 2rem; /* Reduce font size for feature icons */
+    color: #4476f4; /* Your brand color */
+  }
+
+  .homepage-feature-title {
+    font-size: 1.2rem; /* Reduce font size for feature titles */
+  }
+
+  .homepage-feature-description {
+    font-size: 0.9rem; /* Reduce font size for feature descriptions */
   }
 }

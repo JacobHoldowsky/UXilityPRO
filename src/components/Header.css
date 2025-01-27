@@ -1,21 +1,22 @@
 /* General Styles */
 .header {
-  position: sticky;
-  top: 0;
   width: 100%;
-  background-color: #fff;
+  top: 0;
   padding: 10px 0px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000;
+position: fixed;
 }
 
 .header-container {
-  max-width: 1200px;
+  justify-content: center;
+
+  max-width: 80vw;
   margin: 0 auto;
   padding: 0 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 }
 
 .header-logo {
@@ -50,7 +51,7 @@
 }
 
 .header-nav-link {
-  color: #333;
+  color: rgb(255, 248, 248);
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
@@ -82,7 +83,9 @@
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #333;
+  color: #ffffff;
+  padding: 15px; /* Added padding */
+  z-index: 5;
 }
 
 /* Mobile Menu Styles */
@@ -93,7 +96,6 @@
     right: -100%;
     width: 80%;
     height: 100%;
-    background-color: #fff;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -103,7 +105,9 @@
   }
 
   .header-nav.open {
+    z-index: 0;
     right: 0;
+    background-color: rgb(17, 17, 17);
   }
 
   .header-nav-list {
@@ -117,5 +121,6 @@
 
   .mobile-menu-toggle {
     display: block;
+    margin-right: 20px; /* Added margin */
   }
 }
