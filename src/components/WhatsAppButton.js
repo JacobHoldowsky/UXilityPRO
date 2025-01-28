@@ -1,6 +1,6 @@
-import React from 'react';
-import { FaWhatsapp } from 'react-icons/fa';
-import './WhatsAppButton.css';
+import React from "react";
+import { FaWhatsapp } from "react-icons/fa";
+import "./WhatsAppButton.css";
 
 const WhatsAppButton = () => {
   const phoneNumber = "+972533907230"; // Replace with your WhatsApp number
@@ -14,6 +14,7 @@ const WhatsAppButton = () => {
       aria-label="Chat with us on WhatsApp"
     >
       <FaWhatsapp />
+      <span className="whatsapp-text">WhatsApp us</span>
     </a>
   );
 };
