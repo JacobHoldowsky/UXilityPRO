@@ -57,13 +57,34 @@ const ContactForm = () => {
     }
     setIsSubmitting(true);
 
+    const companyLogoUrl = 'UXilityPROLogoBest.svg'; // Replace with your company logo URL
     const emailContent = `
-      <h2>New Contact Form Submission</h2>
-      <p><strong>Name:</strong> ${formData.name}</p>
-      <p><strong>Email:</strong> ${formData.email}</p>
-      <p><strong>Phone Number:</strong> ${formData.number}</p>
-      <p><strong>Message:</strong></p>
-      <p>${formData.message}</p>
+      <div style="font-family: Arial, sans-serif; color: #333;">
+        <div style="text-align: center; margin-bottom: 20px;">
+          <img src="${companyLogoUrl}" alt="Company Logo" style="max-width: 150px;"/>
+        </div>
+        <h2 style="color: #2a70f8;">New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${formData.name}</p>
+        <p><strong>Email:</strong> ${formData.email}</p>
+        <p><strong>Phone Number:</strong> ${formData.number}</p>
+        <p><strong>Message:</strong></p>
+        <p>${formData.message}</p>
+      </div>
+    `;
+
+    const confirmationEmailContent = `
+      <div style="font-family: Arial, sans-serif; color: #333;">
+        <div style="text-align: center; margin-bottom: 20px;">
+          <img src="${companyLogoUrl}" alt="Company Logo" style="max-width: 150px;"/>
+        </div>
+        <h2 style="color: #2a70f8;">Thank You for Contacting Us</h2>
+        <p>Dear ${formData.name},</p>
+        <p>Thank you for reaching out to us. We have received your message and will get back to you promptly.</p>
+        <p><strong>Your Message:</strong></p>
+        <p>${formData.message}</p>
+        <p>Best regards,</p>
+        <p>Your Company Name</p>
+      </div>
     `;
 
     try {
@@ -72,7 +93,7 @@ const ContactForm = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ ...formData, emailContent }),
+        body: JSON.stringify({ ...formData, emailContent, confirmationEmailContent }),
       });
 
       if (response.ok) {
