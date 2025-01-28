@@ -34,9 +34,22 @@ app.post("/send-email", async (req, res) => {
 
   const mailOptions = {
     from: process.env.MAIL_USERNAME,
-    to: process.env.PERSONAL_EMAIL,
+    to: `${process.env.PERSONAL_EMAIL}, ${email}`,
     subject: "New Contact Form Submission",
-    text: `Name: ${name}\nEmail: ${email}\nNumber: ${number}\nMessage: ${message}`,
+    html: `
+      <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+        <img src="https://yourdomain.com/path/to/UXilityPROLogoBest.svg" alt="UXilityPRO Logo" style="width: 150px;"/>
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Number:</strong> ${number}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
+        <br/>
+        <p>Best regards,</p>
+        <p>UXilityPRO Team</p>
+      </div>
+    `,
   };
 
   try {
