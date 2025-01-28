@@ -57,13 +57,22 @@ const ContactForm = () => {
     }
     setIsSubmitting(true);
 
+    const emailContent = `
+      <h2>New Contact Form Submission</h2>
+      <p><strong>Name:</strong> ${formData.name}</p>
+      <p><strong>Email:</strong> ${formData.email}</p>
+      <p><strong>Phone Number:</strong> ${formData.number}</p>
+      <p><strong>Message:</strong></p>
+      <p>${formData.message}</p>
+    `;
+
     try {
       const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, emailContent }),
       });
 
       if (response.ok) {
