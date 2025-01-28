@@ -34,12 +34,12 @@ app.post("/send-email", async (req, res) => {
 
   const mailOptions = {
     from: process.env.MAIL_USERNAME,
-    to: `${process.env.PERSONAL_EMAIL}, ${email}`,
+    to: process.env.PERSONAL_EMAIL,
     subject: "New Contact Form Submission",
     html: `
-      <div style="font-family: Arial, sans-serif; line-height: 1.6;">
-        <img src="https://yourdomain.com/path/to/UXilityPROLogoBest.svg" alt="UXilityPRO Logo" style="width: 150px;"/>
-        <h2>New Contact Form Submission</h2>
+      <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+        <img src="UXilityPROLogoBest.svg" alt="UXilityPRO Logo" style="width: 150px; margin-bottom: 20px;"/>
+        <h2 style="color: #0056b3;">New Contact Form Submission</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Number:</strong> ${number}</p>
@@ -52,10 +52,31 @@ app.post("/send-email", async (req, res) => {
     `,
   };
 
+  const receiptMailOptions = {
+    from: process.env.MAIL_USERNAME,
+    to: email,
+    subject: "Thank you for contacting UXilityPRO",
+    html: `
+      <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+        <img src="https://yourdomain.com/path/to/UXilityPROLogoBest.svg" alt="UXilityPRO Logo" style="width: 150px; margin-bottom: 20px;"/>
+        <h2 style="color: #0056b3;">Thank you for contacting UXilityPRO</h2>
+        <p>Dear ${name},</p>
+        <p>Thank you for reaching out to us. We have received your message and will get back to you shortly.</p>
+        <p><strong>Your Message:</strong></p>
+        <p>${message}</p>
+        <br/>
+        <p>Best regards,</p>
+        <p>UXilityPRO Team</p>
+      </div>
+    `,
+  };
+
   try {
-    // Send email
+    // Send email to admin
     await transporter.sendMail(mailOptions);
-    res.status(200).json({ success: true, message: "Email sent successfully" });
+    // Send receipt email to submitter
+    await transporter.sendMail(receiptMailOptions);
+    res.status(200).json({ success: true, message: "Emails sent successfully" });
   } catch (error) {
     console.error("Failed to send email:", error);
     res.status(500).json({ success: false, message: "Failed to send email" });
