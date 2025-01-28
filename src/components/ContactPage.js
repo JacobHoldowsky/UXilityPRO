@@ -60,9 +60,7 @@ const ContactForm = () => {
     const companyLogoUrl = 'UXilityPROLogoBest.svg'; // Replace with your company logo URL
     const emailContent = `
       <div style="font-family: Arial, sans-serif; color: #333;">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <img src="${companyLogoUrl}" alt="Company Logo" style="max-width: 150px;"/>
-        </div>
+
         <h2 style="color: #2a70f8;">New Contact Form Submission</h2>
         <p><strong>Name:</strong> ${formData.name}</p>
         <p><strong>Email:</strong> ${formData.email}</p>
@@ -74,9 +72,7 @@ const ContactForm = () => {
 
     const confirmationEmailContent = `
       <div style="font-family: Arial, sans-serif; color: #333;">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <img src="${companyLogoUrl}" alt="Company Logo" style="max-width: 150px;"/>
-        </div>
+
         <h2 style="color: #2a70f8;">Thank You for Contacting Us</h2>
         <p>Dear ${formData.name},</p>
         <p>Thank you for reaching out to us. We have received your message and will get back to you promptly.</p>

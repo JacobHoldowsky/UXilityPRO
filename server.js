@@ -37,8 +37,7 @@ app.post("/send-email", async (req, res) => {
     to: process.env.PERSONAL_EMAIL,
     subject: "New Contact Form Submission",
     html: `
-      <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
-        <img src="UXilityPROLogoBest.svg" alt="UXilityPRO Logo" style="width: 150px; margin-bottom: 20px;"/>
+      <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
         <h2 style="color: #0056b3;">New Contact Form Submission</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
@@ -57,9 +56,8 @@ app.post("/send-email", async (req, res) => {
     to: email,
     subject: "Thank you for contacting UXilityPRO",
     html: `
-      <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
-        <img src="https://yourdomain.com/path/to/UXilityPROLogoBest.svg" alt="UXilityPRO Logo" style="width: 150px; margin-bottom: 20px;"/>
-        <h2 style="color: #0056b3;">Thank you for contacting UXilityPRO</h2>
+      <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
+=        <h2 style="color: #0056b3;">Thank you for contacting UXilityPRO</h2>
         <p>Dear ${name},</p>
         <p>Thank you for reaching out to us. We have received your message and will get back to you shortly.</p>
         <p><strong>Your Message:</strong></p>
