@@ -30,7 +30,7 @@ function AboutPage() {
           <img src="me.jpeg" alt="Yaakov Holdowsky" className="founder-image" />
           <div className="founder-info">
             <h3 className="founder-name">Yaakov Holdowsky</h3>
-            <p className="founder-title">Founder</p>
+            {/* <p className="founder-title">Founder</p> */}
             <p className="founder-description">
               As the driving force behind UXilityPRO, I bring a wealth of
               experience in web design and development, specializing in

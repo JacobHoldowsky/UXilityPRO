@@ -144,6 +144,20 @@ body {
   }
 }
 
+.bob {
+  display: inline-block;
+  animation: bob 3s infinite ease-in-out;
+}
+
+@keyframes bob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
 /* Section Titles */
 .homepage-section-title {
   font-size: 2.5rem;

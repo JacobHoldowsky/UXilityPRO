@@ -73,7 +73,7 @@ const HeroSection = () => (
           </h1>
           <p className="homepage-hero-subtitle text-4xl">
             Crafting <span className="highlight">modern websites</span> that{" "}
-            <span className="highlight">elevate</span> your business.
+            <span className="highlight bob">elevate</span> your business.
           </p>
           <div className="flex">
             <i className="fa-solid fa-arrow-right"></i>

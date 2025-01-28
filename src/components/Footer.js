@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="footer-section company-info">
           <h3 className="footer-heading">UXilityPRO</h3>
           <p className="footer-description">
-            We specialize in crafting beautiful, user-centric websites that help
+            We specialize in crafting beautiful, custom, user-centric websites that help
             businesses thrive online. Discover how we can elevate your digital
             presence with cutting-edge solutions tailored to your needs.
           </p>

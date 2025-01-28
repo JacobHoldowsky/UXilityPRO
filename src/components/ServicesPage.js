@@ -151,11 +151,11 @@ function ServicesPage() {
             </button>
             <div className="modal-content">
               <h2 className="modal-title">{selectedContent.header}</h2>
-              <img
+              {/* <img
                 src={selectedContent.imageURL}
                 alt={selectedContent.header}
                 className="modal-image"
-              />
+              /> */}
               {selectedContent.paragraphs.map((paragraph, index) => (
                 <p key={index} className="modal-paragraph">
                   {paragraph}
