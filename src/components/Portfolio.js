@@ -21,6 +21,12 @@ function PortfolioPage() {
       description:
         "Designed and developed a professional website for Roots Rockland, a therapy practice. The site features a calming and welcoming design, providing information about services, therapist profiles, and appointment scheduling. Enhanced with mobile responsiveness and fast loading times, the platform ensures a smooth user experience for clients seeking mental health support.",
     },
+    "UXilityPRO": {
+      imageURL: "UXilityPROLogoBest.svg",
+      websiteURL: "https://uxilitypro.com",
+      description:
+        "Created a comprehensive digital presence for UXilityPRO, a company specializing in user experience optimization. The website showcases the company's services, portfolio, and client testimonials, all within a sleek and modern design. Features include a responsive layout, fast loading times, and an intuitive navigation system, ensuring a seamless user experience across all devices.",
+    },
     // Add more projects here...
   };
 
