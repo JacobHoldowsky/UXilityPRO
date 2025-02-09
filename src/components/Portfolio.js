@@ -16,7 +16,7 @@ function PortfolioPage() {
       description:
         "Developed a sophisticated e-commerce platform for T&Bee Liquid Gold, a premium honey brand. The website offers a seamless shopping experience with integrated Stripe payments for secure transactions, AWS-based image storage for optimal performance, and real-time currency conversion for a global audience. The refined UX/UI ensures an intuitive, engaging customer journey from browsing to checkout.",
     },
-    "Power CoffeeWorks": {
+    "Power Coffeeworks": {
       imageComponent: < Coffee className="portfolio-image" />,
       websiteURL: "https://gregarious-trifle-73e06e.netlify.app/",
       description:
